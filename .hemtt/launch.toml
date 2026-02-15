@@ -1,0 +1,23 @@
+[default]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+    "463939057", # ACE3's Workshop ID
+    "3499977893", # Advanced Developer Tools's Workshop ID
+    "1638341685" # DUI Workshop ID
+]
+
+[rhs]
+extends = "default"
+workshop = [
+    "843577117", # RHSUSAF's Workshop ID
+    "843425103", # RHSAFRF's Workshop ID
+    "843593391", # RHSGREF's Workshop ID
+    "843632231" # RHSSAF's Workshop ID
+]
+
+[cup]
+extends = "default"
+workshop = [
+    "583544987", # CUP Terrains - Maps
+    "583496184" # CUP Terrains - Core
+]

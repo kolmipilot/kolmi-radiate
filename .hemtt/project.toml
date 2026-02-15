@@ -1,0 +1,16 @@
+name = "KOLMI_RADIATE"
+prefix = "kolmir"
+author = "kolmipilot"
+mainprefix = "z"
+
+
+[files]
+include = [
+    "mod.cpp",
+    "README.md",
+    "LICENSE.md",
+    "logo_proj_templ_ca.paa"
+]
+
+[version]
+git_hash = 0
