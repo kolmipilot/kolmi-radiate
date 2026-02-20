@@ -1,200 +1,233 @@
-2026-02-19T15:24:05.104256Z TRACE ThreadId(01) version: 1.18.2
-2026-02-19T15:24:05.104337Z TRACE ThreadId(01) platform: windows
-2026-02-19T15:24:05.104351Z TRACE ThreadId(01) args: [
+2026-02-20T21:16:51.675340Z TRACE ThreadId(01) version: 1.18.2
+2026-02-20T21:16:51.675438Z TRACE ThreadId(01) platform: windows
+2026-02-20T21:16:51.675455Z TRACE ThreadId(01) args: [
     "C:\\Users\\matik\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrettMayson.HEMTT_Microsoft.Winget.Source_8wekyb3d8bbwe\\hemtt.exe",
-    "build",
+    "launch",
 ]
-2026-02-19T15:24:05.107309Z TRACE ThreadId(01) using temporary folder: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate"
-2026-02-19T15:24:05.107321Z TRACE ThreadId(01) using project folder: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate"
-2026-02-19T15:24:05.107360Z TRACE ThreadId(01) using out folder: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout"
-2026-02-19T15:24:05.107610Z TRACE ThreadId(01) using build folder: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build"
-2026-02-19T15:24:05.109584Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/a3/ui_f/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.114160Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/z/ace/addons/medical_engine/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.115439Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/x/cba/addons/xeh/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.115965Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/x/cba/addons/main/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.116988Z TRACE ThreadId(01) config.cpp: VfsPath { path: "/addons/main/config.cpp", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.117938Z TRACE ThreadId(01) Prefix: VfsPath { path: "/addons/main/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.118768Z TRACE ThreadId(01) config.cpp: VfsPath { path: "/addons/radiate/config.cpp", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.119022Z TRACE ThreadId(01) Prefix: VfsPath { path: "/addons/radiate/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.120172Z TRACE ThreadId(01) checking for version macro in VfsPath { path: "/addons/main/script_version.hpp", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
-2026-02-19T15:24:05.120508Z  INFO ThreadId(01) Config loaded for KOLMI_RADIATE 1.0.0.0
-2026-02-19T15:24:05.120580Z TRACE ThreadId(01) Scanning C:\Users\matik\Desktop\merlbtest\kolmi-radiate\kolmi-radiate\addons for addons
-2026-02-19T15:24:05.122141Z DEBUG ThreadId(01) using global config directory: "C:\\Users\\matik\\AppData\\Roaming\\hemtt"
-2026-02-19T15:24:05.122295Z  INFO ThreadId(01) Creating `build` version
-2026-02-19T15:24:05.122319Z TRACE ThreadId(01) phase: init (BOM Check) (start)
-2026-02-19T15:24:05.122329Z TRACE ThreadId(01) phase: init (BOM Check) (done)
-2026-02-19T15:24:05.122332Z TRACE ThreadId(01) phase: init (Final New Line Check) (start)
-2026-02-19T15:24:05.122336Z TRACE ThreadId(01) phase: init (Final New Line Check) (done)
-2026-02-19T15:24:05.122340Z TRACE ThreadId(01) phase: init (git) (start)
-2026-02-19T15:24:05.122343Z TRACE ThreadId(01) phase: init (git) (done)
-2026-02-19T15:24:05.122347Z TRACE ThreadId(01) phase: init (Hooks) (start)
-2026-02-19T15:24:05.122383Z TRACE ThreadId(01) no hooks folder
-2026-02-19T15:24:05.122389Z TRACE ThreadId(01) phase: init (Hooks) (done)
-2026-02-19T15:24:05.122393Z TRACE ThreadId(01) phase: init (pboprefix) (start)
-2026-02-19T15:24:05.122396Z TRACE ThreadId(01) phase: init (pboprefix) (done)
-2026-02-19T15:24:05.122400Z TRACE ThreadId(01) phase: init (Binarize) (start)
-2026-02-19T15:24:05.122410Z TRACE ThreadId(01) Using Binarize path from registry
-2026-02-19T15:24:05.123789Z TRACE ThreadId(01) junction link "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\z\\kolmir\\addons\\main" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\addons\\main"
-2026-02-19T15:24:05.138484Z TRACE ThreadId(01) junction link "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\z\\kolmir\\addons\\radiate" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\addons\\radiate"
-2026-02-19T15:24:05.152908Z TRACE ThreadId(01) junction link "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\a3\\data_f" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include\\a3\\data_f"
-2026-02-19T15:24:05.165257Z TRACE ThreadId(01) junction link "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\a3\\ui_f" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include\\a3\\ui_f"
-2026-02-19T15:24:05.177738Z TRACE ThreadId(01) junction link "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\a3\\ui_f_curator" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include\\a3\\ui_f_curator"
-2026-02-19T15:24:05.195161Z TRACE ThreadId(01) junction link "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\x\\cba" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include\\x\\cba"
-2026-02-19T15:24:05.207983Z TRACE ThreadId(01) junction link "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\z\\ace" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include\\z\\ace"
-2026-02-19T15:24:05.220030Z TRACE ThreadId(01) phase: init (Binarize) (done)
-2026-02-19T15:24:05.220044Z TRACE ThreadId(01) phase: init (tex_headers) (start)
-2026-02-19T15:24:05.220050Z TRACE ThreadId(01) phase: init (tex_headers) (done)
-2026-02-19T15:24:05.220054Z TRACE ThreadId(01) phase: init (Files) (start)
-2026-02-19T15:24:05.220057Z TRACE ThreadId(01) phase: init (Files) (done)
-2026-02-19T15:24:05.220061Z TRACE ThreadId(01) phase: init (Meta) (start)
-2026-02-19T15:24:05.220068Z TRACE ThreadId(01) phase: init (Meta) (done)
-2026-02-19T15:24:05.220074Z TRACE ThreadId(01) phase: init (summary) (start)
-2026-02-19T15:24:05.220077Z TRACE ThreadId(01) phase: init (summary) (done)
-2026-02-19T15:24:05.220081Z TRACE ThreadId(01) phase: init (Rapifier) (start)
-2026-02-19T15:24:05.220084Z TRACE ThreadId(01) phase: init (Rapifier) (done)
-2026-02-19T15:24:05.220088Z TRACE ThreadId(01) phase: init (SQF) (start)
-2026-02-19T15:24:05.609706Z TRACE ThreadId(01) phase: init (SQF) (done)
-2026-02-19T15:24:05.609722Z TRACE ThreadId(01) phase: init (Stringtables) (start)
-2026-02-19T15:24:05.609727Z TRACE ThreadId(01) phase: init (Stringtables) (done)
-2026-02-19T15:24:05.609730Z TRACE ThreadId(01) phase: check (BOM Check) (start)
-2026-02-19T15:24:05.610900Z TRACE ThreadId(01) phase: check (BOM Check) (done)
-2026-02-19T15:24:05.610907Z TRACE ThreadId(01) phase: check (Final New Line Check) (start)
-2026-02-19T15:24:05.612002Z TRACE ThreadId(01) phase: check (Final New Line Check) (done)
-2026-02-19T15:24:05.612009Z TRACE ThreadId(01) phase: check (git) (start)
-2026-02-19T15:24:05.621614Z  WARN ThreadId(01) .hemttprivatekey is not in your .gitignore file.
-2026-02-19T15:24:05.635546Z TRACE ThreadId(01) phase: check (git) (done)
-2026-02-19T15:24:05.635559Z TRACE ThreadId(01) phase: check (Hooks) (start)
-2026-02-19T15:24:05.635563Z TRACE ThreadId(01) phase: check (Hooks) (done)
-2026-02-19T15:24:05.635567Z TRACE ThreadId(01) phase: check (pboprefix) (start)
-2026-02-19T15:24:05.635570Z TRACE ThreadId(01) Checking prefixes against expected project path: z\kolmir\
-2026-02-19T15:24:05.635932Z TRACE ThreadId(01) phase: check (pboprefix) (done)
-2026-02-19T15:24:05.635941Z TRACE ThreadId(01) phase: check (Binarize) (start)
-2026-02-19T15:24:05.641021Z  INFO ThreadId(01) Validated 0 files for binarization
-2026-02-19T15:24:05.641036Z TRACE ThreadId(01) phase: check (Binarize) (done)
-2026-02-19T15:24:05.641041Z TRACE ThreadId(01) phase: check (tex_headers) (start)
-2026-02-19T15:24:05.641046Z TRACE ThreadId(01) phase: check (tex_headers) (done)
-2026-02-19T15:24:05.641049Z TRACE ThreadId(01) phase: check (Files) (start)
-2026-02-19T15:24:05.641053Z TRACE ThreadId(01) phase: check (Files) (done)
-2026-02-19T15:24:05.641056Z TRACE ThreadId(01) phase: check (Meta) (start)
-2026-02-19T15:24:05.641060Z TRACE ThreadId(01) phase: check (Meta) (done)
-2026-02-19T15:24:05.641064Z TRACE ThreadId(01) phase: check (summary) (start)
-2026-02-19T15:24:05.641067Z TRACE ThreadId(01) phase: check (summary) (done)
-2026-02-19T15:24:05.641070Z TRACE ThreadId(01) phase: check (Rapifier) (start)
-2026-02-19T15:24:05.641125Z TRACE ThreadId(01) phase: check (Rapifier) (done)
-2026-02-19T15:24:05.641130Z TRACE ThreadId(01) phase: check (SQF) (start)
-2026-02-19T15:24:05.641191Z TRACE ThreadId(01) phase: check (SQF) (done)
-2026-02-19T15:24:05.641195Z TRACE ThreadId(01) phase: check (Stringtables) (start)
-2026-02-19T15:24:05.641227Z TRACE ThreadId(01) phase: check (Stringtables) (done)
-2026-02-19T15:24:05.641231Z TRACE ThreadId(01) phase: pre_build (BOM Check) (start)
-2026-02-19T15:24:05.641235Z TRACE ThreadId(01) phase: pre_build (BOM Check) (done)
-2026-02-19T15:24:05.641239Z TRACE ThreadId(01) phase: pre_build (Final New Line Check) (start)
-2026-02-19T15:24:05.641242Z TRACE ThreadId(01) phase: pre_build (Final New Line Check) (done)
-2026-02-19T15:24:05.641246Z TRACE ThreadId(01) phase: pre_build (git) (start)
-2026-02-19T15:24:05.641249Z TRACE ThreadId(01) phase: pre_build (git) (done)
-2026-02-19T15:24:05.641253Z TRACE ThreadId(01) phase: pre_build (Hooks) (start)
-2026-02-19T15:24:05.641259Z TRACE ThreadId(01) phase: pre_build (Hooks) (done)
-2026-02-19T15:24:05.641262Z TRACE ThreadId(01) phase: pre_build (pboprefix) (start)
-2026-02-19T15:24:05.641266Z TRACE ThreadId(01) phase: pre_build (pboprefix) (done)
-2026-02-19T15:24:05.641269Z TRACE ThreadId(01) phase: pre_build (Binarize) (start)
-2026-02-19T15:24:05.641517Z  INFO ThreadId(01) Binarized 0 files
-2026-02-19T15:24:05.641533Z TRACE ThreadId(01) phase: pre_build (Binarize) (done)
-2026-02-19T15:24:05.641575Z TRACE ThreadId(01) phase: pre_build (tex_headers) (start)
-2026-02-19T15:24:05.643131Z  INFO ThreadId(01) Generated 0 texture headers
-2026-02-19T15:24:05.643147Z TRACE ThreadId(01) phase: pre_build (tex_headers) (done)
-2026-02-19T15:24:05.643152Z TRACE ThreadId(01) phase: pre_build (Files) (start)
-2026-02-19T15:24:05.643156Z TRACE ThreadId(01) phase: pre_build (Files) (done)
-2026-02-19T15:24:05.643160Z TRACE ThreadId(01) phase: pre_build (Meta) (start)
-2026-02-19T15:24:05.643164Z TRACE ThreadId(01) phase: pre_build (Meta) (done)
-2026-02-19T15:24:05.643167Z TRACE ThreadId(01) phase: pre_build (summary) (start)
-2026-02-19T15:24:05.643171Z TRACE ThreadId(01) phase: pre_build (summary) (done)
-2026-02-19T15:24:05.643175Z TRACE ThreadId(01) phase: pre_build (Rapifier) (start)
-2026-02-19T15:24:05.671670Z  INFO ThreadId(01) Rapified 2 addon configs
-2026-02-19T15:24:05.671712Z TRACE ThreadId(01) phase: pre_build (Rapifier) (done)
-2026-02-19T15:24:05.671719Z TRACE ThreadId(01) phase: pre_build (SQF) (start)
-2026-02-19T15:24:05.679408Z TRACE ThreadId(03) sqf compiling /addons/main/XEH_preStart.sqf
-2026-02-19T15:24:05.679421Z TRACE ThreadId(06) sqf compiling /addons/radiate/functions/fnc_gasmodule.sqf
-2026-02-19T15:24:05.679425Z TRACE ThreadId(04) sqf compiling /addons/radiate/XEH_preInit.sqf
-2026-02-19T15:24:05.679414Z TRACE ThreadId(05) sqf compiling /addons/main/XEH_preInit.sqf
-2026-02-19T15:24:05.679432Z TRACE ThreadId(07) sqf compiling /addons/radiate/XEH_postInit.sqf
-2026-02-19T15:24:05.679439Z TRACE ThreadId(08) sqf compiling /addons/main/XEH_postInit.sqf
-2026-02-19T15:24:05.679445Z TRACE ThreadId(09) sqf compiling /addons/radiate/functions/fnc_radiationManagerPFH.sqf
-2026-02-19T15:24:05.699774Z  INFO ThreadId(01) Compiled 7 sqf files
-2026-02-19T15:24:05.699830Z TRACE ThreadId(01) phase: pre_build (SQF) (done)
-2026-02-19T15:24:05.699837Z TRACE ThreadId(01) phase: pre_build (Stringtables) (start)
-2026-02-19T15:24:05.703659Z TRACE ThreadId(04) binned stringtable"/addons/main/stringtable.bin" [Unique 1]
-2026-02-19T15:24:05.703681Z TRACE ThreadId(03) binned stringtable"/addons/radiate/stringtable.bin" [Unique 2]
-2026-02-19T15:24:05.704512Z  INFO ThreadId(01) Checked 2 stringtables
-2026-02-19T15:24:05.704535Z TRACE ThreadId(01) phase: pre_build (Stringtables) (done)
-2026-02-19T15:24:05.704542Z TRACE ThreadId(01) phase: build (start)
-2026-02-19T15:24:05.707045Z DEBUG ThreadId(01) creating "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\addons"
-2026-02-19T15:24:05.707263Z DEBUG ThreadId(01) building "addons/main" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\addons\\kolmir_main.pbo"
-2026-02-19T15:24:05.708413Z TRACE ThreadId(01) adding file "XEH_preStart.sqfc"
-2026-02-19T15:24:05.708430Z TRACE ThreadId(01) adding file "stringtable.bin"
-2026-02-19T15:24:05.708437Z TRACE ThreadId(01) adding file "XEH_preInit.sqfc"
-2026-02-19T15:24:05.708527Z TRACE ThreadId(01) adding file "script_component.hpp"
-2026-02-19T15:24:05.708679Z TRACE ThreadId(01) adding file "script_version.hpp"
-2026-02-19T15:24:05.708824Z TRACE ThreadId(01) adding file "CfgEventHandlers.hpp"
-2026-02-19T15:24:05.708971Z TRACE ThreadId(01) adding file "CfgModuleCategories.hpp"
-2026-02-19T15:24:05.709428Z TRACE ThreadId(01) adding file "XEH_preStart.sqf"
-2026-02-19T15:24:05.709515Z TRACE ThreadId(01) adding file "config.bin"
-2026-02-19T15:24:05.709595Z TRACE ThreadId(01) adding file "XEH_preInit.sqf"
-2026-02-19T15:24:05.709674Z TRACE ThreadId(01) adding file "XEH_postInit.sqfc"
-2026-02-19T15:24:05.709755Z TRACE ThreadId(01) adding file "script_mod.hpp"
-2026-02-19T15:24:05.709897Z TRACE ThreadId(01) adding file "README.md"
-2026-02-19T15:24:05.710046Z TRACE ThreadId(01) adding file "XEH_PREP.hpp"
-2026-02-19T15:24:05.710188Z TRACE ThreadId(01) adding file "script_debug.hpp"
-2026-02-19T15:24:05.710331Z TRACE ThreadId(01) adding file "script_macros.hpp"
-2026-02-19T15:24:05.710472Z TRACE ThreadId(01) adding file "XEH_postInit.sqf"
-2026-02-19T15:24:05.711300Z DEBUG ThreadId(01) "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\addons" already exists
-2026-02-19T15:24:05.711331Z DEBUG ThreadId(01) building "addons/radiate" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\addons\\kolmir_radiate.pbo"
-2026-02-19T15:24:05.712878Z TRACE ThreadId(01) adding file "XEH_postInit.sqf"
-2026-02-19T15:24:05.712961Z TRACE ThreadId(01) adding file "XEH_postInit.sqfc"
-2026-02-19T15:24:05.713056Z TRACE ThreadId(01) adding file "XEH_PREP.hpp"
-2026-02-19T15:24:05.713267Z TRACE ThreadId(01) adding file "XEH_preInit.sqf"
-2026-02-19T15:24:05.713345Z TRACE ThreadId(01) adding file "XEH_preInit.sqfc"
-2026-02-19T15:24:05.713686Z TRACE ThreadId(01) adding file "CfgVehicles.hpp"
-2026-02-19T15:24:05.713766Z TRACE ThreadId(01) adding file "stringtable.bin"
-2026-02-19T15:24:05.713846Z TRACE ThreadId(01) adding file "CfgEventHandlers.hpp"
-2026-02-19T15:24:05.713996Z TRACE ThreadId(01) adding file "script_component.hpp"
-2026-02-19T15:24:05.714088Z TRACE ThreadId(01) adding file "config.bin"
-2026-02-19T15:24:05.714169Z TRACE ThreadId(01) adding file "initSettings.inc.sqf"
-2026-02-19T15:24:05.714240Z TRACE ThreadId(01) adding file "functions\\fnc_radiationManagerPFH.sqfc"
-2026-02-19T15:24:05.714320Z TRACE ThreadId(01) adding file "functions\\fnc_radiationManagerPFH.sqf"
-2026-02-19T15:24:05.714437Z TRACE ThreadId(01) adding file "functions\\fnc_gasmodule.sqfc"
-2026-02-19T15:24:05.714525Z TRACE ThreadId(01) adding file "functions\\fnc_gasmodule.sqf"
-2026-02-19T15:24:05.714686Z TRACE ThreadId(01) adding file "ui\\RscAttributes.hpp"
-2026-02-19T15:24:05.715598Z  INFO ThreadId(01) Built 2 PBOs
-2026-02-19T15:24:05.715615Z TRACE ThreadId(01) phase: build (done)
-2026-02-19T15:24:05.715621Z TRACE ThreadId(01) phase: post_build (BOM Check) (start)
-2026-02-19T15:24:05.715626Z TRACE ThreadId(01) phase: post_build (BOM Check) (done)
-2026-02-19T15:24:05.715629Z TRACE ThreadId(01) phase: post_build (Final New Line Check) (start)
-2026-02-19T15:24:05.715633Z TRACE ThreadId(01) phase: post_build (Final New Line Check) (done)
-2026-02-19T15:24:05.715637Z TRACE ThreadId(01) phase: post_build (git) (start)
-2026-02-19T15:24:05.715641Z TRACE ThreadId(01) phase: post_build (git) (done)
-2026-02-19T15:24:05.715644Z TRACE ThreadId(01) phase: post_build (Hooks) (start)
-2026-02-19T15:24:05.715648Z TRACE ThreadId(01) phase: post_build (Hooks) (done)
-2026-02-19T15:24:05.715652Z TRACE ThreadId(01) phase: post_build (pboprefix) (start)
-2026-02-19T15:24:05.715656Z TRACE ThreadId(01) phase: post_build (pboprefix) (done)
-2026-02-19T15:24:05.715660Z TRACE ThreadId(01) phase: post_build (Binarize) (start)
-2026-02-19T15:24:05.715663Z TRACE ThreadId(01) phase: post_build (Binarize) (done)
-2026-02-19T15:24:05.715667Z TRACE ThreadId(01) phase: post_build (tex_headers) (start)
-2026-02-19T15:24:05.715670Z TRACE ThreadId(01) phase: post_build (tex_headers) (done)
-2026-02-19T15:24:05.715674Z TRACE ThreadId(01) phase: post_build (Files) (start)
-2026-02-19T15:24:05.805710Z DEBUG ThreadId(01) copying "/LICENSE" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\LICENSE"
-2026-02-19T15:24:05.806568Z DEBUG ThreadId(01) copying "/mod.cpp" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\mod.cpp"
-2026-02-19T15:24:05.807455Z DEBUG ThreadId(01) copying "/README.md" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\README.md"
-2026-02-19T15:24:05.807922Z DEBUG ThreadId(01) copying "/logo_proj_templ_ca.paa" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\build\\logo_proj_templ_ca.paa"
-2026-02-19T15:24:05.808713Z  INFO ThreadId(01) Copied 4 files
-2026-02-19T15:24:05.808735Z TRACE ThreadId(01) phase: post_build (Files) (done)
-2026-02-19T15:24:05.808740Z TRACE ThreadId(01) phase: post_build (Meta) (start)
-2026-02-19T15:24:05.808745Z TRACE ThreadId(01) phase: post_build (Meta) (done)
-2026-02-19T15:24:05.808748Z TRACE ThreadId(01) phase: post_build (summary) (start)
-2026-02-19T15:24:05.810040Z TRACE ThreadId(01) phase: post_build (summary) (done)
-2026-02-19T15:24:05.810051Z TRACE ThreadId(01) phase: post_build (Rapifier) (start)
-2026-02-19T15:24:05.810055Z TRACE ThreadId(01) phase: post_build (Rapifier) (done)
-2026-02-19T15:24:05.810059Z TRACE ThreadId(01) phase: post_build (SQF) (start)
-2026-02-19T15:24:05.810065Z TRACE ThreadId(01) phase: post_build (SQF) (done)
-2026-02-19T15:24:05.810069Z TRACE ThreadId(01) phase: post_build (Stringtables) (start)
-2026-02-19T15:24:05.810073Z TRACE ThreadId(01) phase: post_build (Stringtables) (done)
-2026-02-19T15:24:05.814207Z TRACE ThreadId(01) writing ci annotations to .hemttout/ci_annotations.txt
-2026-02-19T15:24:05.814302Z TRACE ThreadId(01) wrote 0 ci annotations to .hemttout/ci_annotations.txt
+2026-02-20T21:16:51.675665Z TRACE ThreadId(02) (ThreadId(2)) park without timeout
+2026-02-20T21:16:51.675966Z TRACE ThreadId(03) (ThreadId(3)) start runtime::block_on
+2026-02-20T21:16:51.676120Z TRACE ThreadId(02) wait at most 30s
+2026-02-20T21:16:51.676141Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9999979s
+2026-02-20T21:16:51.676232Z TRACE ThreadId(03) checkout waiting for idle connection: ("https", api.github.com)
+2026-02-20T21:16:51.676254Z DEBUG ThreadId(03) starting new connection: https://api.github.com/
+2026-02-20T21:16:51.676274Z TRACE ThreadId(03) Http::connect; scheme=Some("https"), host=Some("api.github.com"), port=None
+2026-02-20T21:16:51.676506Z DEBUG ThreadId(01) using global config directory: "C:\\Users\\matik\\AppData\\Roaming\\hemtt"
+2026-02-20T21:16:51.677249Z TRACE ThreadId(01) launch config: LaunchOptions { workshop: ["1638341685", "3499977893", "450814997", "463939057"], dlc: [], presets: [], optionals: [], mission: None, dev_mission: None, parameters: [], executable: None, binarize: None, file_patching: None, instances: None, rapify: None }
+2026-02-20T21:16:51.677758Z DEBUG ThreadId(01) Arma 3 found at: C:\Program Files (x86)\Steam\steamapps\common\Arma 3
+2026-02-20T21:16:51.681274Z TRACE ThreadId(01) using temporary folder: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate"
+2026-02-20T21:16:51.681286Z TRACE ThreadId(01) using project folder: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate"
+2026-02-20T21:16:51.681322Z TRACE ThreadId(01) using out folder: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout"
+2026-02-20T21:16:51.681426Z DEBUG ThreadId(03) connecting to 140.82.121.5:443
+2026-02-20T21:16:51.681519Z TRACE ThreadId(01) using build folder: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev"
+2026-02-20T21:16:51.688539Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/a3/ui_f/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.690643Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/z/ace/addons/medical_engine/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.691968Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/x/cba/addons/xeh/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.692503Z TRACE ThreadId(01) Prefix: VfsPath { path: "/include/x/cba/addons/main/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.693412Z TRACE ThreadId(01) config.cpp: VfsPath { path: "/addons/radiate/config.cpp", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.694287Z TRACE ThreadId(01) Prefix: VfsPath { path: "/addons/radiate/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.696261Z TRACE ThreadId(01) Prefix: VfsPath { path: "/addons/main/$PBOPREFIX$", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.697503Z TRACE ThreadId(01) config.cpp: VfsPath { path: "/addons/main/config.cpp", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.697595Z TRACE ThreadId(01) checking for version macro in VfsPath { path: "/addons/main/script_version.hpp", fs: VFS { fs: OverlayFS { layers: [VfsPath { path: "", fs: VFS { fs: In Memory File System } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\include" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\AppData\\Local\\Temp\\hemtt\\Users_matik_Desktop_merlbtest_kolmi-radiate_kolmi-radiate\\hemtt_binarize_output" } } } } } }, VfsPath { path: "", fs: VFS { fs: AltrootFS { root: VfsPath { path: "", fs: VFS { fs: PhysicalFS { root: "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate" } } } } } }] } } }
+2026-02-20T21:16:51.697902Z  INFO ThreadId(01) Config loaded for KOLMI_RADIATE 1.0.0.0
+2026-02-20T21:16:51.697969Z TRACE ThreadId(01) Scanning C:\Users\matik\Desktop\merlbtest\kolmi-radiate\kolmi-radiate\addons for addons
+2026-02-20T21:16:51.698327Z DEBUG ThreadId(01) using global config directory: "C:\\Users\\matik\\AppData\\Roaming\\hemtt"
+2026-02-20T21:16:51.698949Z  INFO ThreadId(01) Creating `dev` version
+2026-02-20T21:16:51.698994Z TRACE ThreadId(01) phase: init (BOM Check) (start)
+2026-02-20T21:16:51.699001Z TRACE ThreadId(01) phase: init (BOM Check) (done)
+2026-02-20T21:16:51.699005Z TRACE ThreadId(01) phase: init (Final New Line Check) (start)
+2026-02-20T21:16:51.699007Z TRACE ThreadId(01) phase: init (Final New Line Check) (done)
+2026-02-20T21:16:51.699010Z TRACE ThreadId(01) phase: init (git) (start)
+2026-02-20T21:16:51.699012Z TRACE ThreadId(01) phase: init (git) (done)
+2026-02-20T21:16:51.699015Z TRACE ThreadId(01) phase: init (Hooks) (start)
+2026-02-20T21:16:51.699067Z TRACE ThreadId(01) no hooks folder
+2026-02-20T21:16:51.699073Z TRACE ThreadId(01) phase: init (Hooks) (done)
+2026-02-20T21:16:51.699076Z TRACE ThreadId(01) phase: init (pboprefix) (start)
+2026-02-20T21:16:51.699079Z TRACE ThreadId(01) phase: init (pboprefix) (done)
+2026-02-20T21:16:51.699082Z TRACE ThreadId(01) phase: init (tex_headers) (start)
+2026-02-20T21:16:51.699084Z TRACE ThreadId(01) phase: init (tex_headers) (done)
+2026-02-20T21:16:51.699087Z TRACE ThreadId(01) phase: init (Files) (start)
+2026-02-20T21:16:51.699089Z TRACE ThreadId(01) phase: init (Files) (done)
+2026-02-20T21:16:51.699092Z TRACE ThreadId(01) phase: init (FilePatching) (start)
+2026-02-20T21:16:51.699095Z TRACE ThreadId(01) phase: init (FilePatching) (done)
+2026-02-20T21:16:51.699097Z TRACE ThreadId(01) phase: init (summary) (start)
+2026-02-20T21:16:51.699100Z TRACE ThreadId(01) phase: init (summary) (done)
+2026-02-20T21:16:51.699102Z TRACE ThreadId(01) phase: init (Rapifier) (start)
+2026-02-20T21:16:51.699105Z TRACE ThreadId(01) phase: init (Rapifier) (done)
+2026-02-20T21:16:51.699108Z TRACE ThreadId(01) phase: init (SQF) (start)
+2026-02-20T21:16:51.780910Z DEBUG ThreadId(03) connected to 140.82.121.5:443
+2026-02-20T21:16:51.945671Z TRACE ThreadId(03) http1 handshake complete, spawning background dispatcher task
+2026-02-20T21:16:51.945692Z TRACE ThreadId(03) waiting for connection to be ready
+2026-02-20T21:16:51.945727Z TRACE ThreadId(03) connection is ready
+2026-02-20T21:16:51.945735Z TRACE ThreadId(03) checkout dropped for ("https", api.github.com)
+2026-02-20T21:16:52.173814Z TRACE ThreadId(03) shouldn't retry!
+2026-02-20T21:16:52.173864Z TRACE ThreadId(02) wait at most 30s
+2026-02-20T21:16:52.173902Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9999807s
+2026-02-20T21:16:52.173917Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9999651s
+2026-02-20T21:16:52.173951Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9999318s
+2026-02-20T21:16:52.173997Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9998863s
+2026-02-20T21:16:52.174026Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9998565s
+2026-02-20T21:16:52.174049Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.999833s
+2026-02-20T21:16:52.174080Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.999803s
+2026-02-20T21:16:52.174116Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9997665s
+2026-02-20T21:16:52.174165Z TRACE ThreadId(02) (ThreadId(2)) park timeout 29.9997171s
+2026-02-20T21:16:52.174211Z TRACE ThreadId(03) put; add idle connection for ("https", api.github.com)
+2026-02-20T21:16:52.174232Z DEBUG ThreadId(03) pooling idle connection for ("https", api.github.com)
+2026-02-20T21:16:52.174703Z TRACE ThreadId(02) closing runtime thread (ThreadId(3))
+2026-02-20T21:16:52.174717Z TRACE ThreadId(02) signaled close for runtime thread (ThreadId(3))
+2026-02-20T21:16:52.174725Z TRACE ThreadId(03) (ThreadId(3)) Receiver is shutdown
+2026-02-20T21:16:52.174754Z TRACE ThreadId(03) (ThreadId(3)) end runtime::block_on
+2026-02-20T21:16:52.175310Z TRACE ThreadId(03) (ThreadId(3)) finished
+2026-02-20T21:16:52.175396Z TRACE ThreadId(02) closed runtime thread (ThreadId(3))
+2026-02-20T21:16:53.324002Z TRACE ThreadId(01) phase: init (SQF) (done)
+2026-02-20T21:16:53.324017Z TRACE ThreadId(01) phase: init (Stringtables) (start)
+2026-02-20T21:16:53.324021Z TRACE ThreadId(01) phase: init (Stringtables) (done)
+2026-02-20T21:16:53.324025Z TRACE ThreadId(01) phase: check (BOM Check) (start)
+2026-02-20T21:16:53.325720Z TRACE ThreadId(01) phase: check (BOM Check) (done)
+2026-02-20T21:16:53.325727Z TRACE ThreadId(01) phase: check (Final New Line Check) (start)
+2026-02-20T21:16:53.326657Z TRACE ThreadId(01) phase: check (Final New Line Check) (done)
+2026-02-20T21:16:53.326664Z TRACE ThreadId(01) phase: check (git) (start)
+2026-02-20T21:16:53.333641Z  WARN ThreadId(01) .hemttprivatekey is not in your .gitignore file.
+2026-02-20T21:16:53.354969Z TRACE ThreadId(01) phase: check (git) (done)
+2026-02-20T21:16:53.354983Z TRACE ThreadId(01) phase: check (Hooks) (start)
+2026-02-20T21:16:53.354987Z TRACE ThreadId(01) phase: check (Hooks) (done)
+2026-02-20T21:16:53.354990Z TRACE ThreadId(01) phase: check (pboprefix) (start)
+2026-02-20T21:16:53.354993Z TRACE ThreadId(01) Checking prefixes against expected project path: z\kolmir\
+2026-02-20T21:16:53.355313Z TRACE ThreadId(01) phase: check (pboprefix) (done)
+2026-02-20T21:16:53.355326Z TRACE ThreadId(01) phase: check (tex_headers) (start)
+2026-02-20T21:16:53.355331Z TRACE ThreadId(01) phase: check (tex_headers) (done)
+2026-02-20T21:16:53.355334Z TRACE ThreadId(01) phase: check (Files) (start)
+2026-02-20T21:16:53.355338Z TRACE ThreadId(01) phase: check (Files) (done)
+2026-02-20T21:16:53.355341Z TRACE ThreadId(01) phase: check (FilePatching) (start)
+2026-02-20T21:16:53.355345Z TRACE ThreadId(01) phase: check (FilePatching) (done)
+2026-02-20T21:16:53.355348Z TRACE ThreadId(01) phase: check (summary) (start)
+2026-02-20T21:16:53.355351Z TRACE ThreadId(01) phase: check (summary) (done)
+2026-02-20T21:16:53.355355Z TRACE ThreadId(01) phase: check (Rapifier) (start)
+2026-02-20T21:16:53.355401Z TRACE ThreadId(01) phase: check (Rapifier) (done)
+2026-02-20T21:16:53.355406Z TRACE ThreadId(01) phase: check (SQF) (start)
+2026-02-20T21:16:53.355438Z TRACE ThreadId(01) phase: check (SQF) (done)
+2026-02-20T21:16:53.355442Z TRACE ThreadId(01) phase: check (Stringtables) (start)
+2026-02-20T21:16:53.355459Z TRACE ThreadId(01) phase: check (Stringtables) (done)
+2026-02-20T21:16:53.355463Z TRACE ThreadId(01) phase: pre_build (BOM Check) (start)
+2026-02-20T21:16:53.355467Z TRACE ThreadId(01) phase: pre_build (BOM Check) (done)
+2026-02-20T21:16:53.355508Z TRACE ThreadId(01) phase: pre_build (Final New Line Check) (start)
+2026-02-20T21:16:53.355514Z TRACE ThreadId(01) phase: pre_build (Final New Line Check) (done)
+2026-02-20T21:16:53.355517Z TRACE ThreadId(01) phase: pre_build (git) (start)
+2026-02-20T21:16:53.355521Z TRACE ThreadId(01) phase: pre_build (git) (done)
+2026-02-20T21:16:53.355524Z TRACE ThreadId(01) phase: pre_build (Hooks) (start)
+2026-02-20T21:16:53.355527Z TRACE ThreadId(01) phase: pre_build (Hooks) (done)
+2026-02-20T21:16:53.355530Z TRACE ThreadId(01) phase: pre_build (pboprefix) (start)
+2026-02-20T21:16:53.355533Z TRACE ThreadId(01) phase: pre_build (pboprefix) (done)
+2026-02-20T21:16:53.355536Z TRACE ThreadId(01) phase: pre_build (tex_headers) (start)
+2026-02-20T21:16:53.357221Z  INFO ThreadId(01) Generated 0 texture headers
+2026-02-20T21:16:53.357237Z TRACE ThreadId(01) phase: pre_build (tex_headers) (done)
+2026-02-20T21:16:53.357242Z TRACE ThreadId(01) phase: pre_build (Files) (start)
+2026-02-20T21:16:53.357246Z TRACE ThreadId(01) phase: pre_build (Files) (done)
+2026-02-20T21:16:53.357249Z TRACE ThreadId(01) phase: pre_build (FilePatching) (start)
+2026-02-20T21:16:53.357529Z TRACE ThreadId(06) junction link "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\addons\\radiate" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\addons\\radiate"
+2026-02-20T21:16:53.357530Z TRACE ThreadId(05) junction link "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\addons\\main" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\addons\\main"
+2026-02-20T21:16:53.376706Z TRACE ThreadId(01) phase: pre_build (FilePatching) (done)
+2026-02-20T21:16:53.376730Z TRACE ThreadId(01) phase: pre_build (summary) (start)
+2026-02-20T21:16:53.376737Z TRACE ThreadId(01) phase: pre_build (summary) (done)
+2026-02-20T21:16:53.376741Z TRACE ThreadId(01) phase: pre_build (Rapifier) (start)
+2026-02-20T21:16:53.406915Z  INFO ThreadId(01) Rapified 2 addon configs
+2026-02-20T21:16:53.406947Z TRACE ThreadId(01) phase: pre_build (Rapifier) (done)
+2026-02-20T21:16:53.406953Z TRACE ThreadId(01) phase: pre_build (SQF) (start)
+2026-02-20T21:16:53.413367Z TRACE ThreadId(05) sqf compiling /addons/main/XEH_preInit.sqf
+2026-02-20T21:16:53.413377Z TRACE ThreadId(06) sqf compiling /addons/radiate/XEH_postInit.sqf
+2026-02-20T21:16:53.413385Z TRACE ThreadId(09) sqf compiling /addons/radiate/XEH_preInit.sqf
+2026-02-20T21:16:53.413394Z TRACE ThreadId(07) sqf compiling /addons/main/XEH_preStart.sqf
+2026-02-20T21:16:53.413413Z TRACE ThreadId(10) sqf compiling /addons/main/XEH_postInit.sqf
+2026-02-20T21:16:53.413417Z TRACE ThreadId(08) sqf compiling /addons/radiate/functions/fnc_radiationManagerPFH.sqf
+2026-02-20T21:16:53.413416Z TRACE ThreadId(15) sqf compiling /addons/radiate/functions/fnc_gasmodule.sqf
+2026-02-20T21:16:53.432268Z  INFO ThreadId(01) Compiled 7 sqf files
+2026-02-20T21:16:53.432311Z TRACE ThreadId(01) phase: pre_build (SQF) (done)
+2026-02-20T21:16:53.432318Z TRACE ThreadId(01) phase: pre_build (Stringtables) (start)
+2026-02-20T21:16:53.435829Z TRACE ThreadId(05) binned stringtable"/addons/main/stringtable.bin" [Unique 1]
+2026-02-20T21:16:53.435834Z TRACE ThreadId(06) binned stringtable"/addons/radiate/stringtable.bin" [Unique 2]
+2026-02-20T21:16:53.436930Z  INFO ThreadId(01) Checked 2 stringtables
+2026-02-20T21:16:53.436955Z TRACE ThreadId(01) phase: pre_build (Stringtables) (done)
+2026-02-20T21:16:53.436964Z TRACE ThreadId(01) phase: build (start)
+2026-02-20T21:16:53.440297Z DEBUG ThreadId(01) "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\addons" already exists
+2026-02-20T21:16:53.440314Z DEBUG ThreadId(01) building "addons/main" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\addons\\kolmir_main.pbo"
+2026-02-20T21:16:53.441537Z TRACE ThreadId(01) adding file "XEH_preInit.sqfc"
+2026-02-20T21:16:53.441620Z TRACE ThreadId(01) adding file "CfgModuleCategories.hpp"
+2026-02-20T21:16:53.441788Z TRACE ThreadId(01) adding file "XEH_preInit.sqf"
+2026-02-20T21:16:53.441862Z TRACE ThreadId(01) adding file "XEH_preStart.sqfc"
+2026-02-20T21:16:53.441935Z TRACE ThreadId(01) adding file "README.md"
+2026-02-20T21:16:53.442068Z TRACE ThreadId(01) adding file "script_mod.hpp"
+2026-02-20T21:16:53.442242Z TRACE ThreadId(01) adding file "XEH_postInit.sqf"
+2026-02-20T21:16:53.442405Z TRACE ThreadId(01) adding file "script_debug.hpp"
+2026-02-20T21:16:53.442478Z TRACE ThreadId(01) adding file "stringtable.bin"
+2026-02-20T21:16:53.442550Z TRACE ThreadId(01) adding file "script_component.hpp"
+2026-02-20T21:16:53.442677Z TRACE ThreadId(01) adding file "script_macros.hpp"
+2026-02-20T21:16:53.442804Z TRACE ThreadId(01) adding file "XEH_PREP.hpp"
+2026-02-20T21:16:53.443203Z TRACE ThreadId(01) adding file "script_version.hpp"
+2026-02-20T21:16:53.443274Z TRACE ThreadId(01) adding file "config.bin"
+2026-02-20T21:16:53.443403Z TRACE ThreadId(01) adding file "XEH_preStart.sqf"
+2026-02-20T21:16:53.443490Z TRACE ThreadId(01) adding file "XEH_postInit.sqfc"
+2026-02-20T21:16:53.443625Z TRACE ThreadId(01) adding file "CfgEventHandlers.hpp"
+2026-02-20T21:16:53.444528Z DEBUG ThreadId(01) "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\addons" already exists
+2026-02-20T21:16:53.444538Z DEBUG ThreadId(01) building "addons/radiate" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\addons\\kolmir_radiate.pbo"
+2026-02-20T21:16:53.445757Z TRACE ThreadId(01) adding file "stringtable.bin"
+2026-02-20T21:16:53.445887Z TRACE ThreadId(01) adding file "XEH_preInit.sqf"
+2026-02-20T21:16:53.446017Z TRACE ThreadId(01) adding file "initSettings.inc.sqf"
+2026-02-20T21:16:53.446151Z TRACE ThreadId(01) adding file "CfgVehicles.hpp"
+2026-02-20T21:16:53.446279Z TRACE ThreadId(01) adding file "XEH_postInit.sqf"
+2026-02-20T21:16:53.446431Z TRACE ThreadId(01) adding file "script_component.hpp"
+2026-02-20T21:16:53.446499Z TRACE ThreadId(01) adding file "config.bin"
+2026-02-20T21:16:53.446569Z TRACE ThreadId(01) adding file "XEH_PREP.hpp"
+2026-02-20T21:16:53.446924Z TRACE ThreadId(01) adding file "CfgEventHandlers.hpp"
+2026-02-20T21:16:53.447049Z TRACE ThreadId(01) adding file "XEH_preInit.sqfc"
+2026-02-20T21:16:53.447059Z TRACE ThreadId(01) adding file "XEH_postInit.sqfc"
+2026-02-20T21:16:53.447161Z TRACE ThreadId(01) adding file "functions\\fnc_gasmodule.sqfc"
+2026-02-20T21:16:53.447170Z TRACE ThreadId(01) adding file "functions\\fnc_radiationManagerPFH.sqfc"
+2026-02-20T21:16:53.447239Z TRACE ThreadId(01) adding file "functions\\fnc_radiationManagerPFH.sqf"
+2026-02-20T21:16:53.447368Z TRACE ThreadId(01) adding file "functions\\fnc_gasmodule.sqf"
+2026-02-20T21:16:53.447499Z TRACE ThreadId(01) adding file "ui\\RscAttributes.hpp"
+2026-02-20T21:16:53.448502Z  INFO ThreadId(01) Built 2 PBOs
+2026-02-20T21:16:53.448518Z TRACE ThreadId(01) phase: build (done)
+2026-02-20T21:16:53.448523Z TRACE ThreadId(01) phase: post_build (BOM Check) (start)
+2026-02-20T21:16:53.448526Z TRACE ThreadId(01) phase: post_build (BOM Check) (done)
+2026-02-20T21:16:53.448529Z TRACE ThreadId(01) phase: post_build (Final New Line Check) (start)
+2026-02-20T21:16:53.448532Z TRACE ThreadId(01) phase: post_build (Final New Line Check) (done)
+2026-02-20T21:16:53.448535Z TRACE ThreadId(01) phase: post_build (git) (start)
+2026-02-20T21:16:53.448537Z TRACE ThreadId(01) phase: post_build (git) (done)
+2026-02-20T21:16:53.448540Z TRACE ThreadId(01) phase: post_build (Hooks) (start)
+2026-02-20T21:16:53.448543Z TRACE ThreadId(01) phase: post_build (Hooks) (done)
+2026-02-20T21:16:53.448546Z TRACE ThreadId(01) phase: post_build (pboprefix) (start)
+2026-02-20T21:16:53.448548Z TRACE ThreadId(01) phase: post_build (pboprefix) (done)
+2026-02-20T21:16:53.448551Z TRACE ThreadId(01) phase: post_build (tex_headers) (start)
+2026-02-20T21:16:53.448554Z TRACE ThreadId(01) phase: post_build (tex_headers) (done)
+2026-02-20T21:16:53.448557Z TRACE ThreadId(01) phase: post_build (Files) (start)
+2026-02-20T21:16:53.537784Z DEBUG ThreadId(01) copying "/mod.cpp" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\mod.cpp"
+2026-02-20T21:16:53.538632Z DEBUG ThreadId(01) copying "/logo_proj_templ_ca.paa" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\logo_proj_templ_ca.paa"
+2026-02-20T21:16:53.539840Z DEBUG ThreadId(01) copying "/LICENSE" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\LICENSE"
+2026-02-20T21:16:53.540734Z DEBUG ThreadId(01) copying "/README.md" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev\\README.md"
+2026-02-20T21:16:53.541491Z  INFO ThreadId(01) Copied 4 files
+2026-02-20T21:16:53.541505Z TRACE ThreadId(01) phase: post_build (Files) (done)
+2026-02-20T21:16:53.541509Z TRACE ThreadId(01) phase: post_build (FilePatching) (start)
+2026-02-20T21:16:53.541616Z TRACE ThreadId(01) removing existing symlink at C:\Program Files (x86)\Steam\steamapps\common\Arma 3\z\kolmir
+2026-02-20T21:16:53.541763Z TRACE ThreadId(01) junction link "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3\\z\\kolmir" => "C:\\Users\\matik\\Desktop\\merlbtest\\kolmi-radiate\\kolmi-radiate\\.hemttout\\dev"
+2026-02-20T21:16:53.554194Z  INFO ThreadId(01) Symlink created at C:\Program Files (x86)\Steam\steamapps\common\Arma 3\z\kolmir
+2026-02-20T21:16:53.554212Z TRACE ThreadId(01) phase: post_build (FilePatching) (done)
+2026-02-20T21:16:53.554216Z TRACE ThreadId(01) phase: post_build (summary) (start)
+2026-02-20T21:16:53.555392Z TRACE ThreadId(01) phase: post_build (summary) (done)
+2026-02-20T21:16:53.555400Z TRACE ThreadId(01) phase: post_build (Rapifier) (start)
+2026-02-20T21:16:53.555405Z TRACE ThreadId(01) phase: post_build (Rapifier) (done)
+2026-02-20T21:16:53.555411Z TRACE ThreadId(01) phase: post_build (SQF) (start)
+2026-02-20T21:16:53.555418Z TRACE ThreadId(01) phase: post_build (SQF) (done)
+2026-02-20T21:16:53.555423Z TRACE ThreadId(01) phase: post_build (Stringtables) (start)
+2026-02-20T21:16:53.555429Z TRACE ThreadId(01) phase: post_build (Stringtables) (done)
+2026-02-20T21:16:53.559527Z  INFO ThreadId(01) Launching "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3" with:
+  -mod="C:\Program Files (x86)\Steam\steamapps\workshop\content\107410\1638341685"
+  -mod="C:\Program Files (x86)\Steam\steamapps\workshop\content\107410\3499977893"
+  -mod="C:\Program Files (x86)\Steam\steamapps\workshop\content\107410\450814997"
+  -mod="C:\Program Files (x86)\Steam\steamapps\workshop\content\107410\463939057"
+  -mod="C:\Users\matik\Desktop\merlbtest\kolmi-radiate\kolmi-radiate\.hemttout/dev"
+  -skipIntro
+  -noSplash
+  -showScriptErrors
+  -debug
+  -filePatching
+2026-02-20T21:16:53.564553Z TRACE ThreadId(01) writing ci annotations to .hemttout/ci_annotations.txt
+2026-02-20T21:16:53.564662Z TRACE ThreadId(01) wrote 0 ci annotations to .hemttout/ci_annotations.txt

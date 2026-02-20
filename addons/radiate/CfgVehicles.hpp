@@ -10,7 +10,7 @@ class CfgVehicles {
         scope = 2;
         side=7;
         displayName = CSTRING(RadiationModule_Displayname);
-        category = QGVAR(radiate);
+        category = QGVAR(RADIATE);
         function = QFUNC(radiationModule);
         isTriggerActivated = 0;
         functionPriority = 1;
@@ -67,7 +67,7 @@ class CfgVehicles {
         side=7;
         curatorCanAttach = 1;
         displayName = CSTRING(RadiationModule_Displayname);
-        category = QGVAR(radiate);
+        category = QGVAR(RADIATE);
         function = QACEFUNC(common,dummy);
         curatorInfoType = QGVAR(kolmir_RscRadiationModul);
         isTriggerActivated = 0;
