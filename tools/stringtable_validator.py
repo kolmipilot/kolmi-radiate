@@ -16,7 +16,7 @@ import xml.etree.ElementTree as ET
 
 
 ######## GLOBALS #########
-PROJECT_NAME = "KOLMI_RADIATE"
+PROJECT_NAME = "KOLMIR"
 ID_PREFIX = "STR_KOLMIR_"
 ##########################
 
