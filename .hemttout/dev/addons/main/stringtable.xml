@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project name="KOLMIR">
-    <Package name="Main">
-        <Key ID="str_kolmir_main_url">
-            <English>https://github.com/MiszczuZPolski/IBCMod</English>
-        </Key>
-    </Package>
-</Project>
