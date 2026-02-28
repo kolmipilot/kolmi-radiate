@@ -1,4 +1,22 @@
 class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class KOLMIR_Actions {
+                displayName = CSTRING(KOLMIR_Actions);
+                icon = QPATHTOF(ui\kolmiRadiate_minimal_logo.paa);
+                class KOLMIR_CheckSimpleDosimeterReading {
+                    displayName = CSTRING(CheckSimpleDosimeter);
+                    condition = QUOTE('kolmir_SimpleDosimeter' in (items _player));
+                    exceptions[] = {"isNotSwimming"};
+                    statement = QUOTE(_this call FUNC(checkSimpleDosimeter));
+                    showDisabled = 0;
+                    icon = QPATHTOF(ui\SimpleDosimeter.paa);
+                };
+            };
+        };
+    };
+
     class Logic;
     class Module_F: Logic
     {
@@ -73,5 +91,11 @@ class CfgVehicles {
         isTriggerActivated = 0;
         functionPriority = 1;
         isGlobal = 0;
+    };
+    
+    class Static;
+    class GVAR(logic): Static {
+        scope = 1;
+        displayName = "";
     };
 };

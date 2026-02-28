@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
-* Author: DiGii, MiszczuZPolski
+* Author: kolmipilot
 * This cant be called manualy!
 *
 * Arguments:
@@ -30,7 +30,7 @@ if (isServer) then {
         params ["_logic", "_radius", "_radiationLevel", "_units"];
 
         {
-            [QGVAR(addGasSource), [_x, _radius, _radiationLevel, _x, {
+            [QGVAR(addRadiationSource), [_x, _radius, _radiationLevel, _x, {
                 params ["_endTime", "_logic"];
 
                 // If logic no longer exists, exit

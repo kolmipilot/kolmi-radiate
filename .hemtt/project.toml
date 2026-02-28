@@ -9,7 +9,7 @@ include = [
     "mod.cpp",
     "README.md",
     "LICENSE.md",
-    "logo_proj_templ_ca.paa"
+    "logo_kolmir_ca.paa"
 ]
 
 [version]

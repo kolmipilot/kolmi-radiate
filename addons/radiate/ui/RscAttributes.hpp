@@ -3,7 +3,6 @@ class RscControlsGroupNoScrollbars;
 class RscText;
 class RscCombo;
 class RscEdit;
-class RscCheckBox;
 
 class RscDisplayAttributes {
     class Controls {
@@ -38,47 +37,6 @@ class GVAR(kolmir_RscAtributeRadius): RscControlsGroupNoScrollbars {
             x = QUOTE(W_PART(10.1));
             y = 0;
             w = QUOTE(W_PART(15.9));
-            h = QUOTE(H_PART(1));
-        };
-        class Title3: Title1 {
-            idc = 1614;
-            text = CSTRING(UI_sealable);
-            toolTip = "";
-            y = QUOTE(H_PART(1.2));
-        };
-        class canSealed: RscCheckBox {
-            idc = 1613;
-            x = QUOTE(W_PART(10.1));
-            y = QUOTE(H_PART(1.2));
-            w = QUOTE(W_PART(1));
-            h = QUOTE(H_PART(1));
-        };
-        class Title4: Title1 {
-            idc = 1622;
-            text = CSTRING(UI_UseParticles);
-            toolTip = "";
-            y = QUOTE(H_PART(2.4));
-        };
-        class UseParticles: RscCheckBox {
-            idc = 1615;
-            checked = 1;
-            x = QUOTE(W_PART(10.1));
-            y = QUOTE(H_PART(2.4));
-            w = QUOTE(W_PART(1));
-            h = QUOTE(H_PART(1));
-        };
-        class Title8: Title1 {
-            idc = 1619;
-            text = CSTRING(UI_UseCustomParticles);
-            toolTip = "";
-            y = QUOTE(H_PART(3.6));
-        };
-        class UseParticlescolors: RscCheckBox {
-            idc = 1618;
-            checked = 1;
-            x = QUOTE(W_PART(10.1));
-            y = QUOTE(H_PART(3.6));
-            w = QUOTE(W_PART(1));
             h = QUOTE(H_PART(1));
         };
         class Title5: Title1 {
@@ -138,7 +96,7 @@ class GVAR(kolmir_RscRadiationModul): RscDisplayAttributes {
             };
         };
         class ButtonOK: ButtonOK {
-            onSetFocus = QUOTE(_this call FUNC(ui_radiationModule));
+            onButtonClick = QUOTE(_this call FUNC(radiationModuleZeus));
         };
         class ButtonCancel: ButtonCancel {};
     };

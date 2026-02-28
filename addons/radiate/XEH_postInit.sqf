@@ -2,6 +2,8 @@
 
 #define CBA_SETTINGS_CAT LSTRING(cba_name)
 
+[QGVAR(handleUnitVitals), LINKFUNC(handleUnitVitals)] call CBA_fnc_addEventHandler;
+
 if (!isServer) exitWith {};
 
 GVAR(RadiationSources) = createHashMap;
@@ -55,4 +57,3 @@ GVAR(RadiationSources) = createHashMap;
 }] call CBA_fnc_addEventHandler;
 
 [LINKFUNC(radiationManagerPFH), RADIATION_MANAGER_PFH_DELAY, []] call CBA_fnc_addPerFrameHandler;
-

@@ -15,39 +15,68 @@
  * Public: No
  */
 
+// Zbierz wszystkie jednostki, które mogą być w promieniowaniu
+private _unitsInZones = [];
+
 {
-    _y params ["_radiationLogic", "_radius", "_radiationType", "_condition", "_conditionArgs", "_isSealable"];
-    TRACE_2("rafiationManagerPFH loop",_x,_y);
+    _y params ["_radiationLogic", "_power", "_radiationType", "_condition", "_conditionArgs"];
 
-    private _infectedObject = _y;
+    // Ochrona przed zerową lub ujemną mocą
+    if (_power <= 0) then { continue };
 
-    // Remove when condition is no longer valid
+    // Sprawdzenie warunku
     if !(_conditionArgs call _condition) then {
-        TRACE_2("condition no longer valid, deleting",_x,_y);
-
         detach _radiationLogic;
         deleteVehicle _radiationLogic;
-
         GVAR(RadiationSources) deleteAt _x;
-
         continue;
     };
 
-    // Poison units (alive or dead) close to the radiation source
+    // --- PROMIEŃ Z MOCY ---
+    private _radius = 10 * sqrt _power;
+
     {
-        // Get the distance of the unit from the center of the sphere (_radiationLogic)
         private _distance = _x distance _radiationLogic;
+        if (_distance > _radius) then { continue };
 
-        // Ensure the distance does not exceed the radius (prevents going beyond the sphere)
-        _distance = _distance min _radius;
+        // Spadek wg prawa odwrotnego kwadratu
+        private _intensity = _power / (1 + (_distance ^ 2));
 
-        // Calculate the intensity as a normalized value (1 at center, 0 at the edge)
-        private _intensity = 1 - (_distance / _radius);
+        // Sumowanie intensywności
+        private _prevIntensity = _x getVariable [QGVAR(areaIntensity), 0];
+        _x setVariable [QGVAR(areaIntensity), _prevIntensity + _intensity, true];
 
-        _x setVariable [QGVAR(areaIntensity), _intensity, true];
-        _x setVariable [QGVAR(areaType), _radiationType, true];
+        // --- NOWA LOGIKA areaType ---
+        // Pobierz aktualną tablicę typów
+        private _typeArray = _x getVariable [QGVAR(areaTypes), []];
 
-        [QGVAR(poison), [_x, _radiationType, _infectedObject], _x] call CBA_fnc_targetEvent;
+        // Szukamy czy typ już istnieje
+        private _found = false;
+
+        {
+            if ((_x select 0) isEqualTo _radiationType) exitWith {
+                _x set [1, (_x select 1) + _intensity];
+                _found = true;
+            };
+        } forEach _typeArray;
+
+        // Jeśli nie istnieje – dodaj nowy wpis
+        if (!_found) then {
+            _typeArray pushBack [_radiationType, _intensity];
+        };
+
+        _x setVariable [QGVAR(areaTypes), _typeArray, true];
+
+        [QGVAR(handleUnitVitals), [_x], _x] call CBA_fnc_targetEvent;
+
+        _unitsInZones pushBackUnique _x;
 
     } forEach nearestObjects [_radiationLogic, ["CAManBase"], _radius];
+
 } forEach GVAR(RadiationSources);
+// Wyzeruj areaIntensity dla jednostek, które nie są już w żadnej strefie
+{
+    if (!(_x in _unitsInZones)) then {
+        _x setVariable [QGVAR(areaTypes), [], true];
+    };
+} forEach allUnits;

@@ -10,7 +10,10 @@ class CfgPatches {
         units[] = {
             "kolmir_module_radiation",
             "kolmir_module_zeus_radiation"
-         };
+        };
+        weapons[] = {
+            "kolmir_SimpleDosimeter"
+        };
     };
 };
 
@@ -18,3 +21,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "ui\RscAttributes.hpp"
 #include "CfgFactionClasses.hpp"
+#include "CfgWeapons.hpp"
