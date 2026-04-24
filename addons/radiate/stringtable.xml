@@ -74,8 +74,8 @@
             <Polish>Dostępne kombinezony</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_ui_max_range">
-            <English>Max range</English>
-            <Polish>Maksymalny zasięg</Polish>
+            <English>Source strength</English>
+            <Polish>Moc promieniowania</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_ui_radiationtype">
             <English>Radiation type</English>

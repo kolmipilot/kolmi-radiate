@@ -1,25 +1,104 @@
+#include "..\script_component.hpp"
 /*
- * Mapuje wartości z UI (Zeus) do logicznych zmiennych Radius i Radiation_Type
- * Wywoływane przez onSetFocus przyciskiem OK w RscAttributes
- */
-params ["_ctrl"];
+ * Author: kolmipilot
+ * Creates the UI for the Zeus Module
+ *
+ * Arguments:
+ * 0: Control <NUMBER>
+ *
+ * Return Value:
+ * NONE
+ *
+ * Example:
+ * [1105] call kolmir_radiate_fnc_ui_radiationModule;
+ *
+ * Public: No
+*/
 
-// Znajdź display attributes
-private _display = ctrlParent _ctrl;
-if (isNull _display) exitWith {};
+params ["_control"];
 
-// Pobierz wartość promienia
-private _radiusCtrl = _display displayCtrl 1611;
-private _radius = parseNumber (ctrlText _radiusCtrl);
+private _display = ctrlParent _control;
+private _ctrlButtonOK = _display displayCtrl 1;
+private _ctrlButtonCancel = _display displayCtrl 2;
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
-// Pobierz typ promieniowania
-private _typeCtrl = _display displayCtrl 1617;
-private _typeIndex = lbCurSel _typeCtrl;
-private _type = _typeIndex;
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
-// Ustaw na logice (jeśli jest dostępna)
-private _logic = missionNamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objNull];
-if (!isNull _logic) then {
-    _logic setVariable ["Radius", _radius, true];
-    _logic setVariable ["Radiation_Type", _type, true];
+scopeName "Main";
+private _fnc_errorAndClose = {
+    params ["_msg"];
+    _display closeDisplay 0;
+    deleteVehicle _logic;
+    [_msg] call ACEFUNC(zeus,showMessage);
+    breakOut "Main";
 };
+
+if !(isNull attachedTo _logic) then {
+    private _object = attachedTo _logic;
+    switch (true) do {
+        case (isNull _object): {
+            [ACELSTRING(zeus,NothingSelected)] call _fnc_errorAndClose;
+        };
+        case (isPlayer _object): {
+            ["str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call _fnc_errorAndClose;
+        };
+        case (!alive _object): {
+            [ACELSTRING(zeus,OnlyAlive)] call _fnc_errorAndClose;
+        };
+        default {};
+    };
+};
+
+private _fnc_onUnload = {
+    params ["_display"];
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+    if (isNull _logic) exitWith {};
+    if !(_display getVariable [QGVAR(Confirmed), false]) then
+    {
+        if !(isNull attachedTo _logic) then {
+            deleteVehicle _logic;
+        } else {
+            detach (attachedTo _logic);
+            deleteVehicle _logic;
+        };
+    };
+};
+
+private _fnc_onConfirm = {
+    params [["_ctrlButtonOK", controlNull, [controlNull]]];
+
+    private _display = ctrlParent _ctrlButtonOK;
+    if (isNull _display) exitWith {};
+
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+    if (isNull _logic) exitWith {};
+
+    private _ctrlRadius = _display displayCtrl 1611;
+    private _radius = parseNumber ctrlText _ctrlRadius;
+    private _ctrlRadiationType = _display displayCtrl 1617;
+    private _radiationLevel = lbCurSel _ctrlRadiationType;
+    private _center = objNull;
+
+    if (isNull attachedTo _logic) then {
+        _center = _logic;
+    } else {
+        _center = attachedTo _logic;
+    };
+
+    [QGVAR(addRadiationSource), [_center, _radius, _radiationLevel, _logic, {
+        params ["_endTime", "_logic"];
+
+        // If logic no longer exists, exit
+        if (isNull _logic) exitWith {
+            false // returns
+           };
+
+        CBA_missionTime < _endTime // return
+    }, [CBA_missionTime + 1e10, _logic]]] call CBA_fnc_serverEvent;
+
+    _display setVariable [QGVAR(Confirmed), true];
+
+};
+
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

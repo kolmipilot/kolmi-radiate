@@ -21,3 +21,9 @@ workshop = [
     "583544987", # CUP Terrains - Maps
     "583496184" # CUP Terrains - Core
 ]
+
+[kat]
+extends = "default"
+workshop = [
+    "2020940806", # KAT - KAM
+]

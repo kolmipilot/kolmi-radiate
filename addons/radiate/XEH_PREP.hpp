@@ -4,4 +4,5 @@ PREP(getList);
 PREP(handleUnitVitals);
 PREP(checkSimpleDosimeter);
 PREP(hasDosimeter);
-PREP(radiationModuleZeus);
+PREP(ui_radiationModule);
+PREP(AttributeRadius);

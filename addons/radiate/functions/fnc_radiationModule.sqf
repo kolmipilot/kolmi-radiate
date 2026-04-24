@@ -12,7 +12,7 @@
 * NONE
 *
 * Example:
-* [] call kat_chemical_fnc_gasmodule;
+* [] call kolmir_radiate_fnc_radiationModule;
 *
 * Public: No
 */

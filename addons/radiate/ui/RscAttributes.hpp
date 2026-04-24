@@ -20,7 +20,7 @@ class GVAR(kolmir_RscAtributeRadius): RscControlsGroupNoScrollbars {
     x = 0;
     y = 0;
     w = QUOTE(W_PART(26));
-    h = QUOTE(H_PART(8));
+    h = QUOTE(H_PART(5.5));
     class controls {
         class Title1: RscText {
             idc = 16109;
@@ -43,12 +43,12 @@ class GVAR(kolmir_RscAtributeRadius): RscControlsGroupNoScrollbars {
             idc = -1;
             text = CSTRING(UI_selectRadiationType);
             toolTip = "";
-            y = QUOTE(H_PART(4.8));
+            y = QUOTE(H_PART(1.2));
         };
         class radiationType: RscCombo {
             idc = 1617;
             x = QUOTE(W_PART(10.1));
-            y = QUOTE(H_PART(4.8));
+            y = QUOTE(H_PART(1.2));
             w = QUOTE(W_PART(10));
             h = QUOTE(H_PART(1));
             colorBackground[] = {0, 0, 0, 0.7};
@@ -69,14 +69,14 @@ class GVAR(kolmir_RscAtributeRadius): RscControlsGroupNoScrollbars {
             idc = 1616;
             text = CSTRING(RadiationModule_createContaminatedZone);
             toolTip = "";
-            y = QUOTE(H_PART(6));
+            y = QUOTE(H_PART(2.4));
             w = QUOTE(W_PART(25));
         };
         class Title6: Title1 {
             idc = -1;
             text = CSTRING(RadiationModule_placeModuleOnObject);
             toolTip = "";
-            y = QUOTE(H_PART(7.1));
+            y = QUOTE(H_PART(3.6));
             w = QUOTE(W_PART(25));
         };
     };
@@ -96,7 +96,7 @@ class GVAR(kolmir_RscRadiationModul): RscDisplayAttributes {
             };
         };
         class ButtonOK: ButtonOK {
-            onButtonClick = QUOTE(_this call FUNC(radiationModuleZeus));
+            onSetFocus = QUOTE(_this call FUNC(ui_radiationModule));
         };
         class ButtonCancel: ButtonCancel {};
     };
