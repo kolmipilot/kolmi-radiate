@@ -12,7 +12,8 @@ class CfgPatches {
             "kolmir_module_zeus_radiation"
         };
         weapons[] = {
-            "kolmir_SimpleDosimeter"
+            "kolmir_SimpleDosimeter",
+            "kolmir_SimpleGeigerCounter"
         };
     };
 };
@@ -20,5 +21,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ui\RscAttributes.hpp"
+#include "RscTitles.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgWeapons.hpp"

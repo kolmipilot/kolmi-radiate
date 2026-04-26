@@ -19,35 +19,36 @@ Instead of defining a fixed radius, you now define **radiation power** in **mSv/
 
 ## Radius Calculation
 
-The radiation radius is **not linear**.
+The radiation radius scales with the square root of power for realistic behavior.
 
 **Formula:**
-radius = 10 * sqrt(power)
+radius = sqrt(power) × 3
 
 ### Examples
 
 | Power (mSv/h) | Radius            |
 |---------------|-------------------|
-| 100           | 100 m             |
-| 3000          | ~547 m            |
-| 10000         | 1000 m (1 km)     |
-| 100000        | ~3162 m (~3.1 km) |
+| 100           | 30 m              |
+| 3000          | ~164 m            |
+| 10000         | ~300 m            |
+| 100000        | ~949 m            |
+| 300000        | ~1,643 m (~1.6 km)|
 
-This prevents unrealistic extreme distances for high radiation values.  
-Scaling is non-linear.
+This provides realistic ranges where high radiation levels have appropriate effective distances.
 
 ---
 
 ## Radiation Falloff
 
-Radiation intensity decreases using an inverse square model:
-intensity = power / (1 + distance²)
+Radiation intensity decreases using an inverted quadratic function:
+intensity = power × (1 - (distance / radius)²)
 
 This means:
 
-- Very strong near the source  
-- Drops rapidly with distance  
-- Physically inspired behavior  
+- Full power at the source (distance = 0)
+- Drops quadratically with distance
+- Reaches zero exactly at the radius boundary
+- Realistic falloff for point radiation sources  
 
 ---
 
@@ -121,8 +122,8 @@ Protection is **10× less effective** than for beta.
 
 ## Summary
 
-- Radius scales with **√power** (non-linear)
-- Falloff follows inverse square law
+- Radius scales with **√power × 3** (realistic ranges)
+- Falloff follows **inverted quadratic** law (intensity = power × (1 - (d/r)²))
 - Multiple radiation types supported simultaneously
 - Protection effectiveness depends on radiation type
 - Dose accumulates per second and converts correctly from mSv/h

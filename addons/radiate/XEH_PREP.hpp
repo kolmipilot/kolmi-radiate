@@ -6,3 +6,7 @@ PREP(checkSimpleDosimeter);
 PREP(hasDosimeter);
 PREP(ui_radiationModule);
 PREP(AttributeRadius);
+PREP(enableGeigerCounter);
+PREP(showGeigerCounter);
+PREP(hideGeigerCounter);
+PREP(hasGeigerCounter);

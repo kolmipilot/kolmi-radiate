@@ -3,6 +3,7 @@ class RscControlsGroupNoScrollbars;
 class RscText;
 class RscCombo;
 class RscEdit;
+class RscPicture;
 
 class RscDisplayAttributes {
     class Controls {

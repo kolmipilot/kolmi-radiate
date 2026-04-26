@@ -13,6 +13,36 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QPATHTOF(ui\SimpleDosimeter.paa);
                 };
+                class kolmir_SimpleGeigerCounter{
+                    displayName = CSTRING(SimpleGeigerCounterMenu);
+                    icon = QPATHTOF(ui\SimpleGeigerCounter.paa);
+                    exceptions[] = {"isNotSwimming"};
+
+                    class kolmir_SimpleGeigerCounter_Enable {
+                        displayName = CSTRING(EnableSimpleGeigerCounter);
+                        condition = QUOTE(([_player] call FUNC(hasGeigerCounter)) && !(_player getVariable [ARR_2(QQGVAR(GeigerCounterEnabled),false)]));
+                        exceptions[] = {"isNotSwimming"};
+                        statement = QUOTE([_player] call FUNC(enableGeigerCounter));
+                        showDisabled = 0;
+                        icon = QPATHTOF(ui\SimpleGeigerCounter.paa);
+                    };
+                    class kolmir_SimpleGeigerCounter_SoundOn {
+                        displayName = CSTRING(EnableSimpleGeigerCounterSound);
+                        condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(GeigerCounterSound),false)]) && ([_player] call FUNC(hasGeigerCounter)));
+                        exceptions[] = {"isNotSwimming"};
+                        statement = QUOTE(_player setVariable [ARR_3(QQGVAR(GeigerCounterSound),true,true)]);
+                        showDisabled = 0;
+                        icon = QPATHTOF(ui\SimpleGeigerCounter.paa);
+                    };
+                    class kolmir_SimpleGeigerCounter_SoundOff {
+                        displayName = CSTRING(DisableSimpleGeigerCounterSound);
+                        condition = QUOTE((_player getVariable [ARR_2(QQGVAR(GeigerCounterSound),false)]) && ([_player] call FUNC(hasGeigerCounter)));
+                        exceptions[] = {"isNotSwimming"};
+                        statement = QUOTE(_player setVariable [ARR_3(QQGVAR(GeigerCounterSound),false,true)]);
+                        showDisabled = 0;
+                        icon = QPATHTOF(ui\SimpleGeigerCounter.paa);
+                    };
+                };
             };
         };
     };

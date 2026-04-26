@@ -14,4 +14,14 @@ class CfgWeapons {
             mass = 1;
         };
     };
+    class ItemWatch;
+    class kolmir_SimpleGeigerCounter : ItemWatch {
+        ACE_hideItemType = "Watch";
+        author = "kolmipilot";
+        displayName = CSTRING(SimpleGeigerCounter);
+        model = "\A3\weapons_F\ammo\mag_univ.p3d";
+        picture = QPATHTOF(ui\SimpleGeigerCounter.paa);
+        descriptionShort = CSTRING(SimpleGeigerCounter_desc);
+        descriptionUse = CSTRING(SimpleGeigerCounter_desc);
+    };
 };

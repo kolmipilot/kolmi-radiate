@@ -18,6 +18,12 @@
 // Zbierz wszystkie jednostki, które mogą być w promieniowaniu
 private _unitsInZones = [];
 
+// Reset previous frame radiation values so intensity is momentary
+{
+    _x setVariable [QGVAR(areaIntensity), 0, true];
+    _x setVariable [QGVAR(areaTypes), [], true];
+} forEach allUnits;
+
 {
     _y params ["_radiationLogic", "_power", "_radiationType", "_condition", "_conditionArgs"];
 
@@ -33,14 +39,15 @@ private _unitsInZones = [];
     };
 
     // --- PROMIEŃ Z MOCY ---
-    private _radius = 10 * sqrt _power;
+    // Dostosowany zasięg: większy radius, mniej efektywna radiacja
+    private _radius = sqrt(_power) * 3;
 
     {
         private _distance = _x distance _radiationLogic;
         if (_distance > _radius) then { continue };
 
-        // Spadek wg prawa odwrotnego kwadratu
-        private _intensity = _power / (1 + (_distance ^ 2));
+        // Odwrócona funkcja kwadratowa: intensity = power przy distance=0, 0 przy distance=radius
+        private _intensity = _power * (1 - ((_distance / _radius) ^ 2));
 
         // Sumowanie intensywności
         private _prevIntensity = _x getVariable [QGVAR(areaIntensity), 0];
@@ -74,9 +81,10 @@ private _unitsInZones = [];
     } forEach nearestObjects [_radiationLogic, ["CAManBase"], _radius];
 
 } forEach GVAR(RadiationSources);
-// Wyzeruj areaIntensity dla jednostek, które nie są już w żadnej strefie
+// Wyzeruj areaIntensity i areaTypes dla jednostek, które nie są już w żadnej strefie
 {
     if (!(_x in _unitsInZones)) then {
         _x setVariable [QGVAR(areaTypes), [], true];
+        _x setVariable [QGVAR(areaIntensity), 0, true];
     };
 } forEach allUnits;

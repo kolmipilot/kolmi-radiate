@@ -4,6 +4,19 @@
 
 [QGVAR(handleUnitVitals), LINKFUNC(handleUnitVitals)] call CBA_fnc_addEventHandler;
 
+[CBA_SETTINGS_CAT, QGVAR(showSimpleGeigerCounter), "Show Geiger Counter", {
+    // Conditions: canInteract
+    if (!([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call ACEFUNC(common,canInteractWith)) || {!('kolmir_SimpleGeigerCounter' in assignedItems ACE_player)}) exitWith { false };
+
+    if !(GETMVAR(GVAR(GeigerCounterActive),false)) then {
+        [ACE_player] call FUNC(showGeigerCounter);
+    } else {
+        call FUNC(hideGeigerCounter);
+    };
+
+    true
+}, { false }, [24, [false, false, false]], false] call CBA_fnc_addKeybind;
+
 if (!isServer) exitWith {};
 
 GVAR(RadiationSources) = createHashMap;

@@ -17,6 +17,14 @@
             <English>Simple dosimeter for measuring radiation exposure.</English>
             <Polish>Prosty dozymetr do pomiaru ekspozycji promieniowania.</Polish>
         </Key>
+        <Key ID="str_kolmir_radiate_SimpleGeigerCounter">
+            <English>Simple Geiger Counter</English>
+            <Polish>Prosty licznik Geigera</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_SimpleGeigerCounter_desc">
+            <English>Simple geiger counter for measuring radiation exposure.</English>
+            <Polish>Prosty licznik Geigera do pomiaru ekspozycji promieniowania.</Polish>
+        </Key>
         <Key ID="str_kolmir_radiate_cba_name">
             <English>kolmi - Radiate</English>
             <Polish>kolmi - Radiate</Polish>
@@ -84,6 +92,22 @@
         <Key ID="str_kolmir_radiate_ui_selectradiationtype">
             <English>Select radiation type</English>
             <Polish>Wybierz rodzaj promieniowania</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_SimpleGeigerCounterMenu">
+            <English>Simple Geiger Counter</English>
+            <Polish>Prosty licznik Geigera</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_EnableSimpleGeigerCounter">
+            <English>Enable Simple Geiger Counter</English>
+            <Polish>Włącz prosty licznik Geigera</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_EnableSimpleGeigerCounterSound">
+            <English>Enable Simple Geiger Counter Sound</English>
+            <Polish>Włącz dźwięk prostego licznika Geigera</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_DisableSimpleGeigerCounterSound">
+            <English>Disable Simple Geiger Counter Sound</English>
+            <Polish>Wyłącz dźwięk prostego licznika Geigera</Polish>
         </Key>
     </Package>
 </Project>
