@@ -46,12 +46,12 @@ _unit setVariable [QGVAR(GeigerCounterEnabled), true, true];
 
     if (_geigerSound) then {
         switch true do {
-            case (_intensity > 0.9): { [QGVAR(playTone), [_unit, QGVAR(chemTone)], _unit] call CBA_fnc_targetEvent; };
-            case (_intensity > 0.7): { [QGVAR(playTone), [_unit, QGVAR(chemRapidChime)], _unit] call CBA_fnc_targetEvent; };
-            case (_intensity > 0.5): { [QGVAR(playTone), [_unit, QGVAR(chemFastChime)], _unit] call CBA_fnc_targetEvent; };
-            case (_intensity > 0.3): { [QGVAR(playTone), [_unit, QGVAR(chemNormalChime)], _unit] call CBA_fnc_targetEvent; };
-            case (_intensity > 0): { [QGVAR(playTone), [_unit, QGVAR(chemSlowChime)], _unit] call CBA_fnc_targetEvent; };
-            default { [QGVAR(playTone), [_unit, QGVAR(chemBaseChime)], _unit] call CBA_fnc_targetEvent; };
+            case (_intensity > 3000): { [QGVAR(playTone), [_unit, QGVAR(CrazyGeiger)], _unit] call CBA_fnc_targetEvent; };
+            case (_intensity > 1500): { [QGVAR(playTone), [_unit, QGVAR(RapidGeiger)], _unit] call CBA_fnc_targetEvent; };
+            case (_intensity > 700): { [QGVAR(playTone), [_unit, QGVAR(FastGeiger)], _unit] call CBA_fnc_targetEvent; };
+            case (_intensity > 400): { [QGVAR(playTone), [_unit, QGVAR(NormalGeiger)], _unit] call CBA_fnc_targetEvent; };
+            case (_intensity > 0): { [QGVAR(playTone), [_unit, QGVAR(SlowGeiger)], _unit] call CBA_fnc_targetEvent; };
+            default { [QGVAR(playTone), [_unit, QGVAR(BaseGeiger)], _unit] call CBA_fnc_targetEvent; };
         };
     };
-}, 5, [_unit]] call CBA_fnc_addPerFrameHandler;
+}, 4, [_unit]] call CBA_fnc_addPerFrameHandler;

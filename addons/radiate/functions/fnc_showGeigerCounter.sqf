@@ -53,10 +53,13 @@ private _exposure = _display displayCtrl 18805;
         _intensity = _intensity + (_x select 1);
     } forEach _areaTypes;
 
+
+
     if ((_unit getVariable [QGVAR(GeigerCounterEnabled), false])) then {
 
-        TRACE_1("kolmir_SimpleGeigerCounter: exposurelvl",_intensity);
-        _exposure ctrlSetText (_intensity toFixed 0);
+        private _randomizedIntensity = _intensity * (random [0.9, 1, 1.1]);
+        TRACE_1("kolmir_SimpleGeigerCounter: exposurelvl",_randomizedIntensity);
+        _exposure ctrlSetText (_randomizedIntensity toFixed 0);
 
     } else {
         _exposure ctrlSetText ("----");

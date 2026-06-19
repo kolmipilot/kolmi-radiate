@@ -11,10 +11,33 @@
 #define QACEGVAR(module,var)        QUOTE(ACEGVAR(module,var))
 
 #define ACEFUNC(module,function)    TRIPLES(DOUBLES(ACE_PREFIX,module),fnc,function)
+#define ACE_ADDON(component)        DOUBLES(ACE_PREFIX,component)
 #define QACEFUNC(module,function)   QUOTE(ACEFUNC(module,function))
 
 #define ACELSTRING(module,string)   QUOTE(TRIPLES(STR,DOUBLES(ACE_PREFIX,module),string))
 #define ACECSTRING(module,string)   QUOTE(TRIPLES($STR,DOUBLES(ACE_PREFIX,module),string))
+
+#define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+#define GET_STRING(config,default) (if (isText (config)) then {getText (config)} else {default})
+#define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
+
+#define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
+
+#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
+    name = #ITEM; \
+    count = COUNT; \
+}
+
+// ACEX Merge
+#define ACEX_PREFIX acex
+#define XADDON DOUBLES(ACEX_PREFIX,COMPONENT)
+#define XGVAR(var) DOUBLES(XADDON,var)
+#define EXGVAR(var1,var2) TRIPLES(ACEX_PREFIX,var1,var2)
+#define QXGVAR(var) QUOTE(XGVAR(var))
+#define QEXGVAR(var1,var2) QUOTE(EXGVAR(var1,var2))
+#define QQXGVAR(var) QUOTE(QXGVAR(var))
+#define QQEXGVAR(var1,var2) QUOTE(QEXGVAR(var1,var2))
+#define ACEX_PREP(func) PREP(func); TRIPLES(XADDON,fnc,func) = DFUNC(func)
 
 #define IS_MOD_LOADED(modclass)     (isClass (configFile >> "CfgPatches" >> #modclass))
 

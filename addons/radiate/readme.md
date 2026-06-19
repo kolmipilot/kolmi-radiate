@@ -116,6 +116,34 @@ Protection is **10× less effective** than for beta.
 
 ---
 
+## Medical & Treatment
+
+The system includes specialized medical items to manage accumulated radiation dose.
+
+### EDTA Auto-Injector
+
+- **Type:** Medical Item (ACE Medical)
+- **Effect:** Reduces radiation dose by **400 units** (10% of lethal dose) per injection.
+- **Usage:** Applied through the ACE Medical treatment menu on arms or legs.
+
+### Absolute Vodka
+
+- **Type:** Consumable
+- **Effect:** Reduces radiation dose by **40 units** (1% of lethal dose) per drink.
+- **Progression:** Full Bottle → Half Bottle → Empty Bottle.
+- **Usage:** Can be consumed through self-interaction or inventory actions.
+
+### Blood Tester (Blood Analyzer)
+
+- **Type:** Medical Item (ACE Medical)
+- **Usage:** Used to examine a patient's blood to check radiation levels.
+- **Action:** Applied through the ACE Medical "Examine" menu on the left or right arm.
+- **Time:** Takes 10 seconds by default (configurable via CBA settings).
+- **Effect:** Measures the patient's accumulated radiation dose with a realistic variance of ±5% and logs the result in the patient's ACE Medical log (e.g., `Radiation Check: 120.5`).
+- **Consumption:** Reusable item; is not consumed upon use.
+
+---
+
 ## Summary
 
 - Radius scales with **√power × 3** (realistic ranges)
@@ -123,3 +151,4 @@ Protection is **10× less effective** than for beta.
 - Multiple radiation types supported simultaneously
 - Protection effectiveness depends on radiation type
 - Dose accumulates per second and converts correctly from mSv/h
+- Reusable **Blood Tester** allows checking patient radiation dose via the ACE Medical examine menu

@@ -37,6 +37,11 @@ if ((count _areaTypes) > 0) then {
     private _hasBackpack = backpack _unit in (missionNamespace getVariable [QGVAR(availBackpackList), []]);
 
     private _protection = 1;
+    private _medicationProtection = _unit getVariable [QGVAR(medicationProtection), 0];
+    if(_medicationProtection > 0) then { 
+        _protection = _protection + _medicationProtection;
+    };
+
     if (_hasMask) then { _protection = _protection + 10; };
     if (_hasSuit) then { _protection = _protection + 5; };
     if (_hasBackpack) then { _protection = _protection + 5; };

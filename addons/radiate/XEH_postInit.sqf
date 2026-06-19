@@ -2,7 +2,19 @@
 
 #define CBA_SETTINGS_CAT LSTRING(cba_name)
 
+// Initialize KAT detection for all machines (both server and clients)
+GVAR(KATLoaded) = [] call FUNC(hasKAT);
+
 [QGVAR(handleUnitVitals), LINKFUNC(handleUnitVitals)] call CBA_fnc_addEventHandler;
+
+[QGVAR(EDTALocal), LINKFUNC(treatmentAdvanced_EDTALocal)] call CBA_fnc_addEventHandler;
+[QGVAR(medicationLocal), LINKFUNC(medicationLocal)] call CBA_fnc_addEventHandler;
+["acex_rationConsumed", LINKFUNC(drinkVodka)] call CBA_fnc_addEventHandler;
+
+[QGVAR(playTone), {
+    params ["_unit", "_tone"];
+    _unit say3D [_tone];
+}] call CBA_fnc_addEventHandler;
 
 [CBA_SETTINGS_CAT, QGVAR(showSimpleGeigerCounter), "Show Geiger Counter", {
     // Conditions: canInteract
@@ -17,7 +29,27 @@
     true
 }, { false }, [24, [false, false, false]], false] call CBA_fnc_addKeybind;
 
+if (hasInterface) then {
+    call FUNC(initVodkaEffect);
+    [LINKFUNC(handleVodkaEffect), 1] call CBA_fnc_addPerFrameHandler;
+
+    // Initialize post-process effects for radiation sickness
+    GVAR(ppBlur) = ppEffectCreate ["DynamicBlur", 450];
+    GVAR(ppBlur) ppEffectEnable false;
+
+    GVAR(ppChromatic) = ppEffectCreate ["ChromAberration", 451];
+    GVAR(ppChromatic) ppEffectEnable false;
+
+    GVAR(ppColor) = ppEffectCreate ["ColorCorrections", 452];
+    GVAR(ppColor) ppEffectEnable false;
+
+    // Radiation sickness PFH — runs on all clients, handles symptoms based on accumulated dose
+    // independent of whether unit is currently in a radiation zone
+    [LINKFUNC(radiationSicknessPFH), 2, []] call CBA_fnc_addPerFrameHandler;
+};
+
 if (!isServer) exitWith {};
+
 
 GVAR(RadiationSources) = createHashMap;
 

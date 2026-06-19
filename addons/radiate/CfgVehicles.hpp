@@ -5,6 +5,22 @@ class CfgVehicles {
             class KOLMIR_Actions {
                 displayName = CSTRING(KOLMIR_Actions);
                 icon = QPATHTOF(ui\kolmiRadiate_minimal_logo.paa);
+                class KOLMIR_DrinkVodka {
+                    displayName = CSTRING(DrinkVodka);
+                    condition = QUOTE('kolmir_VodkaBottle' in (items _player));
+                    exceptions[] = {"isNotSwimming"};
+                    statement = QUOTE(_this call FUNC(drinkVodkaAce));
+                    showDisabled = 0;
+                    icon = QPATHTOF(ui\absolut_ico.paa);
+                };
+                class KOLMIR_DrinkVodkaHalf {
+                    displayName = CSTRING(DrinkVodkaHalf);
+                    condition = QUOTE('kolmir_VodkaBottle_Half' in (items _player));
+                    exceptions[] = {"isNotSwimming"};
+                    statement = QUOTE(_this call FUNC(drinkVodkaAceHalf));
+                    showDisabled = 0;
+                    icon = QPATHTOF(ui\absolut_ico.paa);
+                };
                 class KOLMIR_CheckSimpleDosimeterReading {
                     displayName = CSTRING(CheckSimpleDosimeter);
                     condition = QUOTE('kolmir_SimpleDosimeter' in (items _player));
@@ -128,4 +144,27 @@ class CfgVehicles {
         scope = 1;
         displayName = "";
     };
+
+    class Building: Static {};
+    class Strategic: Building {};
+    class ReammoBox: Strategic {};
+	class WeaponHolder: ReammoBox {};
+    class Item_Base_F: WeaponHolder {};
+    class ACE_WaterBottle_Item: Item_Base_F{};
+	class radiate_vodka_prop: ACE_WaterBottle_Item
+	{
+		scope = 2;              // 2 oznacza, że obiekt jest widoczny w Edytorze Eden
+		scopeCurator = 2;       // Widoczny dla Zeusa
+		displayName = "Butelka Wodki Absolute"; // Nazwa wyświetlana w grze
+		model = QPATHTOF(data\vodka\vodkaBottle.p3d); // Ścieżka do Twojego modelu P3D
+
+		
+		// Kategoria w edytorze Eden
+		editorCategory = QGVAR(RADIATE);
+        editorSubcategory = QGVAR(RADIATE_props);
+
+        class TransportItems {
+            MACRO_ADDITEM(kolmir_VodkaBottle,1);
+        };
+	};
 };

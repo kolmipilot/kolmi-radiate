@@ -7,3 +7,4 @@ texHeaders.bin
 *.biprivatekey
 Thumbs.db
 .hemttout/*
+.aider*

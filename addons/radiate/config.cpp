@@ -9,11 +9,18 @@ class CfgPatches {
         VERSION_CONFIG;
         units[] = {
             "kolmir_module_radiation",
-            "kolmir_module_zeus_radiation"
+            "kolmir_module_zeus_radiation",
+            "radiate_vodka_prop",
         };
         weapons[] = {
             "kolmir_SimpleDosimeter",
-            "kolmir_SimpleGeigerCounter"
+            "kolmir_SimpleGeigerCounter",
+            "kolmir_EdtaAutoInjector",
+            "kolmir_VodkaBottle",
+            "kolmir_VodkaBottle_Half",
+            "kolmir_VodkaBottle_Empty",
+            "kolmir_BloodTester"
+
         };
     };
 };
@@ -24,3 +31,7 @@ class CfgPatches {
 #include "RscTitles.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgSounds.hpp"
+#include "ACE_Medical_Treatment.hpp"
+#include "ACE_Medical_Treatment_Actions.hpp"
+#include "ACE_Medical_Injuries.hpp"

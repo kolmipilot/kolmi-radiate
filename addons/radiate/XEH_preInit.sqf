@@ -10,3 +10,8 @@ PREP_RECOMPILE_END;
 #include "initSettings.inc.sqf"
 
 ADDON = true;
+
+if (hasInterface) then {
+    GVAR(vodkaEffect) = -1;
+};
+

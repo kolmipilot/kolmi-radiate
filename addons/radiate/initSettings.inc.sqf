@@ -40,3 +40,121 @@
     },
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(treatmentTime_EDTA),
+    "SLIDER",
+    ["EDTA treatment time", "EDTA treatment time"],
+    CBA_SETTINGS_CAT,
+    [1, 60, 5, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(CheckRadiation_TreatmentTime),
+    "SLIDER",
+    ["Check Radiation Treatment Time", "Check Radiation Treatment Time"],
+    CBA_SETTINGS_CAT,
+    [1, 60, 10, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableVodkaEffect),
+    "CHECKBOX",
+    [LLSTRING(setting_enableVodkaEffect), LLSTRING(setting_enableVodkaEffect_desc)],
+    CBA_SETTINGS_CAT,
+    [true],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vodkaLimitBeforeEffect),
+    "SLIDER",
+    [LLSTRING(setting_vodkaLimitBeforeEffect), LLSTRING(setting_vodkaLimitBeforeEffect_desc)],
+    CBA_SETTINGS_CAT,
+    [1, 10, 2, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vodkaDecayTime),
+    "SLIDER",
+    [LLSTRING(setting_vodkaDecayTime), LLSTRING(setting_vodkaDecayTime_desc)],
+    CBA_SETTINGS_CAT,
+    [10, 1200, 240, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vodkaProtectionDuration),
+    "SLIDER",
+    [LLSTRING(setting_vodkaProtectionDuration), LLSTRING(setting_vodkaProtectionDuration_desc)],
+    CBA_SETTINGS_CAT,
+    [10, 1200, 180, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vodkaDrinkTime),
+    "SLIDER",
+    [LLSTRING(setting_vodkaDrinkTime), LLSTRING(setting_vodkaDrinkTime_desc)],
+    CBA_SETTINGS_CAT,
+    [1, 30, 5, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vodkaUnconsciousLevel),
+    "SLIDER",
+    [LLSTRING(setting_vodkaUnconsciousLevel), LLSTRING(setting_vodkaUnconsciousLevel_desc)],
+    CBA_SETTINGS_CAT,
+    [1, 30, 10, 0],
+    1
+] call CBA_fnc_addSetting;
+
+// --- Radiation Sickness Settings ---
+[
+    QGVAR(radiationSicknessRandomness),
+    "SLIDER",
+    [LLSTRING(setting_radiationSicknessRandomness), LLSTRING(setting_radiationSicknessRandomness_desc)],
+    CBA_SETTINGS_CAT,
+    [0, 2, 1, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(radiationSicknessThresholdMultiplier),
+    "SLIDER",
+    [LLSTRING(setting_radiationSicknessThresholdMultiplier), LLSTRING(setting_radiationSicknessThresholdMultiplier_desc)],
+    CBA_SETTINGS_CAT,
+    [0.1, 5, 1, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableRadiationSickness),
+    "CHECKBOX",
+    [LLSTRING(setting_enableRadiationSickness), LLSTRING(setting_enableRadiationSickness_desc)],
+    CBA_SETTINGS_CAT,
+    [true],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(radiationSymptomInterval),
+    "SLIDER",
+    [LLSTRING(setting_radiationSymptomInterval), LLSTRING(setting_radiationSymptomInterval_desc)],
+    CBA_SETTINGS_CAT,
+    [1, 1000, 60, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(radiationSeverityCoefficient),
+    "SLIDER",
+    [LLSTRING(setting_radiationSeverityCoefficient), LLSTRING(setting_radiationSeverityCoefficient_desc)],
+    CBA_SETTINGS_CAT,
+    [0, 3, 0.5, 1],
+    1
+] call CBA_fnc_addSetting;

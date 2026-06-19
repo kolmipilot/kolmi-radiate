@@ -20,7 +20,7 @@ params ["_unit"];
 
 if(!([_unit] call FUNC(hasDosimeter))) exitWith {false};
 
-private _countedRadiationDose = _unit getVariable [QGVAR(countedRadiationDose), 0];
+private _countedRadiationDose = (_unit getVariable [QGVAR(countedRadiationDose), 0]) * (random [0.9, 1, 1.1]);
 
 // Get max oxygen time from mission settings, default to 3600 seconds (60 minutes).
 private _deadlyRadiation = 4000;
@@ -47,7 +47,8 @@ _string = "";
 for "_a" from 1 to _emptyBars do {
     _string = _string + "|";
 };
-_text = composeText [_text, [_string, "#808080"] call ace_common_fnc_stringToColoredText, lineBreak, str _countedRadiationDose, "mSv"];
+private _lowLine = parseText format ["<t align='center'>%1 mSv</t>", (_countedRadiationDose toFixed 1)];
+_text = composeText [_text, [_string, "#808080"] call ace_common_fnc_stringToColoredText, lineBreak, _lowLine];
 
 // Get the picture of the backpack from its config.
 private _picture = QPATHTOF(ui\SimpleDosimeter.paa);
