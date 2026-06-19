@@ -148,7 +148,7 @@ The system includes specialized medical items to manage accumulated radiation do
 
 ---
 
-## Radiation Sickness (Choroba Popromienna)
+## Radiation Sickness
 
 Radiation sickness is automatically applied to any unit that has accumulated a radiation dose above defined thresholds.  
 The system runs as a per-frame handler (`fnc_radiationSicknessPFH`) and evaluates every local unit every **2 seconds**.
