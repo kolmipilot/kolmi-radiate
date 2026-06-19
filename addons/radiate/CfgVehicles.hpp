@@ -148,23 +148,23 @@ class CfgVehicles {
     class Building: Static {};
     class Strategic: Building {};
     class ReammoBox: Strategic {};
-	class WeaponHolder: ReammoBox {};
+    class WeaponHolder: ReammoBox {};
     class Item_Base_F: WeaponHolder {};
     class ACE_WaterBottle_Item: Item_Base_F{};
-	class radiate_vodka_prop: ACE_WaterBottle_Item
-	{
-		scope = 2;              // 2 oznacza, że obiekt jest widoczny w Edytorze Eden
-		scopeCurator = 2;       // Widoczny dla Zeusa
-		displayName = "Butelka Wodki Absolute"; // Nazwa wyświetlana w grze
-		model = QPATHTOF(data\vodka\vodkaBottle.p3d); // Ścieżka do Twojego modelu P3D
+    class radiate_vodka_prop: ACE_WaterBottle_Item
+    {
+        scope = 2;              // 2 oznacza, że obiekt jest widoczny w Edytorze Eden
+        scopeCurator = 2;       // Widoczny dla Zeusa
+        displayName = "Butelka Wodki Absolute"; // Nazwa wyświetlana w grze
+        model = QPATHTOF(data\vodka\vodkaBottle.p3d); // Ścieżka do Twojego modelu P3D
 
-		
-		// Kategoria w edytorze Eden
-		editorCategory = QGVAR(RADIATE);
+        
+        // Kategoria w edytorze Eden
+        editorCategory = QGVAR(RADIATE);
         editorSubcategory = QGVAR(RADIATE_props);
 
         class TransportItems {
             MACRO_ADDITEM(kolmir_VodkaBottle,1);
         };
-	};
+    };
 };
