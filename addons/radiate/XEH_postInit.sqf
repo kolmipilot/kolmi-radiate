@@ -18,7 +18,7 @@ GVAR(KATLoaded) = [] call FUNC(hasKAT);
 
 [CBA_SETTINGS_CAT, QGVAR(showSimpleGeigerCounter), "Show Geiger Counter", {
     // Conditions: canInteract
-    if (!([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call ACEFUNC(common,canInteractWith)) || {!('kolmir_SimpleGeigerCounter' in assignedItems ACE_player)}) exitWith { false };
+    if (!([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call ACEFUNC(common,canInteractWith)) || {!(('kolmir_SimpleGeigerCounter' in assignedItems ACE_player) || ('kolmir_AdvancedGeigerCounter' in assignedItems ACE_player))}) exitWith { false };
 
     if !(GETMVAR(GVAR(GeigerCounterActive),false)) then {
         [ACE_player] call FUNC(showGeigerCounter);
@@ -57,7 +57,7 @@ GVAR(RadiationSources) = createHashMap;
     params [
         ["_source", objNull, [objNull, []]],
         ["_radius", 0, [0]],
-        ["_radiationType", 0, [0]],
+        ["_radiationType", "alpha", ["", 0]],
         ["_key", ""],
         ["_condition", {true}, [{}]],
         ["_conditionArgs", []]

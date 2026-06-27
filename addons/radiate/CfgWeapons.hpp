@@ -46,6 +46,15 @@ class CfgWeapons {
         descriptionShort = CSTRING(SimpleGeigerCounter_desc);
         descriptionUse = CSTRING(SimpleGeigerCounter_desc);
     };
+    class kolmir_AdvancedGeigerCounter: ItemWatch {
+        ACE_hideItemType = "Watch";
+        author = "kolmipilot";
+        displayName = CSTRING(AdvancedGeigerCounter);
+        model = "\A3\weapons_F\ammo\mag_univ.p3d";
+        picture = QPATHTOF(ui\AdvancedGeigerCounter.paa);
+        descriptionShort = CSTRING(AdvancedGeigerCounter_desc);
+        descriptionUse = CSTRING(AdvancedGeigerCounter_desc);
+    };
 
     // - Water Bottles --------------------------------------------------------
     class kolmir_VodkaBottle: ACE_ItemCore {

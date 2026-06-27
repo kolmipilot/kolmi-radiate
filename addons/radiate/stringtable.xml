@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="KOLMIR">
     <Package name="Radiate">
+        <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Large">
+            <English>Large Radiation Burn</English>
+            <Polish>Duże poparzenie od promieniowania</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Medium">
+            <English>Medium Radiation Burn</English>
+            <Polish>Średnie poparzenie od promieniowania</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Minor">
+            <English>Minor Radiation Burn</English>
+            <Polish>Małe poparzenie od promieniowania</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_AdvancedGeigerCounter">
+            <English>Advanced Geiger Counter</English>
+            <Polish>Zaawansowany licznik Geigera</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_AdvancedGeigerCounterMenu">
+            <English>Advanced Geiger Counter</English>
+            <Polish>Zaawansowany licznik Geigera</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_AdvancedGeigerCounter_desc">
+            <English>Advanced geiger counter for measuring radiation exposure.</English>
+            <Polish>Zaawansowany licznik Geigera do pomiaru ekspozycji promieniowania.</Polish>
+        </Key>
         <Key ID="str_kolmir_radiate_BloodTester">
             <English>Blood Tester</English>
             <Polish>Tester krwi</Polish>
@@ -8,18 +32,6 @@
         <Key ID="str_kolmir_radiate_BloodTester_desc">
             <English>Device used to test blood for radiation levels.</English>
             <Polish>Urządzenie do testowania krwi pod kątem poziomu promieniowania.</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_CheckRadiation_DisplayName">
-            <English>Check Radiation</English>
-            <Polish>Sprawdź napromieniowanie</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_CheckRadiation_DisplayNameProgress">
-            <English>Checking Radiation...</English>
-            <Polish>Sprawdzanie napromieniowania...</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_CheckRadiation_Log">
-            <English>Radiation Check: %1 mSv</English>
-            <Polish>Wynik pomiaru promieniowania: %1 mSv</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_CheckDosimeter_DisplayName">
             <English>Check Dosimeter</English>
@@ -33,9 +45,25 @@
             <English>Dosimeter Check: %1 mSv</English>
             <Polish>Wynik na dozymetrze: %1 mSv</Polish>
         </Key>
+        <Key ID="str_kolmir_radiate_CheckRadiation_DisplayName">
+            <English>Check Radiation</English>
+            <Polish>Sprawdź napromieniowanie</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_CheckRadiation_DisplayNameProgress">
+            <English>Checking Radiation...</English>
+            <Polish>Sprawdzanie napromieniowania...</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_CheckRadiation_Log">
+            <English>Radiation Check: %1 mSv</English>
+            <Polish>Wynik pomiaru promieniowania: %1 mSv</Polish>
+        </Key>
         <Key ID="str_kolmir_radiate_CheckSimpleDosimeter">
             <English>Check Dosimeter</English>
             <Polish>Sprawdź dozymetr</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_DisableAdvancedGeigerCounterSound">
+            <English>Disable Advanced Geiger Counter Sound</English>
+            <Polish>Wyłącz dźwięk zaawansowanego licznika Geigera</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_DisableSimpleGeigerCounterSound">
             <English>Disable Simple Geiger Counter Sound</English>
@@ -48,6 +76,14 @@
         <Key ID="str_kolmir_radiate_EdtaAutoInjector_desc">
             <English>Auto-injector containing EDTA for radiation treatment.</English>
             <Polish>Autostrzykawka zawierająca EDTA do leczenia napromieniowania.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_EnableAdvancedGeigerCounter">
+            <English>Enable Advanced Geiger Counter</English>
+            <Polish>Włącz zaawansowany licznik Geigera</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_EnableAdvancedGeigerCounterSound">
+            <English>Enable Advanced Counter Sound</English>
+            <Polish>Włącz dźwięk zaawansowanego licznika</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_EnableSimpleGeigerCounter">
             <English>Enable Geiger Counter</English>
@@ -154,6 +190,14 @@
             <English>Available Suits</English>
             <Polish>Dostępne kombinezony</Polish>
         </Key>
+        <Key ID="str_kolmir_radiate_setting_enableRadiationSickness">
+            <English>Enable Radiation Sickness</English>
+            <Polish>Włącz chorobę popromienną</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_enableRadiationSickness_desc">
+            <English>Enables radiation sickness symptoms when radiation dose exceeds thresholds.</English>
+            <Polish>Włącza objawy choroby popromiennej po przekroczeniu progów dawki promieniowania.</Polish>
+        </Key>
         <Key ID="str_kolmir_radiate_setting_enableVodkaEffect">
             <English>Enable Vodka Visual Effect</English>
             <Polish>Włącz efekt wizualny wódki</Polish>
@@ -162,13 +206,37 @@
             <English>Enables chromatic aberration when drinking too much vodka.</English>
             <Polish>Włącza aberrację chromatyczną po wypiciu zbyt dużej ilości wódki.</Polish>
         </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaLimitBeforeEffect">
-            <English>Vodka Level Limit before Visual Effect</English>
-            <Polish>Limit poziomu wódki przed efektem wizualnym</Polish>
+        <Key ID="str_kolmir_radiate_setting_radiationSeverityCoefficient">
+            <English>Damage Severity Coefficient</English>
+            <Polish>Współczynnik ostrości obrażeń</Polish>
         </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaLimitBeforeEffect_desc">
-            <English>How many drinks of vodka are required to start seeing visual effects.</English>
-            <Polish>Ile jednostek wódki trzeba wypić, aby zacząć widzieć efekty wizualne.</Polish>
+        <Key ID="str_kolmir_radiate_setting_radiationSeverityCoefficient_desc">
+            <English>How much damage scales with dose above threshold. 0 = no scaling (flat damage), 0.5 = moderate, 1 = strong, 3 = very aggressive. Formula: baseDamage * (1 + coeff * doseAboveThreshold / threshold).</English>
+            <Polish>Jak bardzo obrażenia skalują się z dawką powyżej progu. 0 = brak skalowania, 0.5 = umiarkowane, 1 = silne, 3 = bardzo agresywne. Wzór: baseDamage * (1 + współczynnik * dawkaPowyżejProgu / próg).</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_radiationSicknessRandomness">
+            <English>Radiation Sickness Randomness</English>
+            <Polish>Losowość choroby popromiennej</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_radiationSicknessRandomness_desc">
+            <English>Multiplier for symptom activation chance. 0 = never, 1 = normal, 2 = twice as likely.</English>
+            <Polish>Mnożnik szansy aktywacji objawów. 0 = nigdy, 1 = normalnie, 2 = dwukrotnie większa szansa.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_radiationSicknessThresholdMultiplier">
+            <English>Radiation Sickness Threshold</English>
+            <Polish>Próg choroby popromiennej</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_radiationSicknessThresholdMultiplier_desc">
+            <English>Multiplier for all symptom thresholds. 0.1 = symptoms appear at 10% dose, 5 = symptoms appear at 5x dose.</English>
+            <Polish>Mnożnik wszystkich progów objawów. 0.1 = objawy przy 10% dawki, 5 = objawy przy 5x dawki.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_radiationSymptomInterval">
+            <English>Symptom Tick Interval</English>
+            <Polish>Interwał ticka objawów</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_radiationSymptomInterval_desc">
+            <English>Seconds between each tick of all progressive symptoms (burns, bleeding, pain). The base damage is applied every tick and scales with radiation dose.</English>
+            <Polish>Sekundy między kolejnymi tickami wszystkich postępujących objawów (oparzenia, krwawienie, ból). Bazowe obrażenia są aplikowane co tick i skalują się z dawką.</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_setting_vodkaDecayTime">
             <English>Vodka Level Decay Time (Seconds)</English>
@@ -178,14 +246,6 @@
             <English>Time in seconds for the vodka level to decrease by one drink.</English>
             <Polish>Czas w sekundach, po którym poziom wódki spada o jedną jednostkę.</Polish>
         </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaProtectionDuration">
-            <English>Vodka Protection Duration (Seconds)</English>
-            <Polish>Czas trwania ochrony po wódce (Sekundy)</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaProtectionDuration_desc">
-            <English>Time in seconds that radiation protection from a single drink lasts.</English>
-            <Polish>Czas w sekundach, przez który trwa ochrona przed promieniowaniem po jednym napoju.</Polish>
-        </Key>
         <Key ID="str_kolmir_radiate_setting_vodkaDrinkTime">
             <English>Vodka Drinking Time (Seconds)</English>
             <Polish>Czas picia wódki (Sekundy)</Polish>
@@ -193,6 +253,22 @@
         <Key ID="str_kolmir_radiate_setting_vodkaDrinkTime_desc">
             <English>Time in seconds required to drink a bottle or half-bottle of vodka.</English>
             <Polish>Czas w sekundach potrzebny na wypicie butelki lub pół butelki wódki.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaLimitBeforeEffect">
+            <English>Vodka Level Limit before Visual Effect</English>
+            <Polish>Limit poziomu wódki przed efektem wizualnym</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaLimitBeforeEffect_desc">
+            <English>How many drinks of vodka are required to start seeing visual effects.</English>
+            <Polish>Ile jednostek wódki trzeba wypić, aby zacząć widzieć efekty wizualne.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaProtectionDuration">
+            <English>Vodka Protection Duration (Seconds)</English>
+            <Polish>Czas trwania ochrony po wódce (Sekundy)</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaProtectionDuration_desc">
+            <English>Time in seconds that radiation protection from a single drink lasts.</English>
+            <Polish>Czas w sekundach, przez który trwa ochrona przed promieniowaniem po jednym napoju.</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_setting_vodkaUnconsciousLevel">
             <English>Vodka Level for Unconsciousness</English>
@@ -241,58 +317,6 @@
         <Key ID="str_kolmir_radiate_vodkabottlehalf_displayname">
             <English>Vodka Bottle (Half)</English>
             <Polish>Butelka wódki (Połowa)</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_enableRadiationSickness">
-            <English>Enable Radiation Sickness</English>
-            <Polish>Włącz chorobę popromienną</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_enableRadiationSickness_desc">
-            <English>Enables radiation sickness symptoms when radiation dose exceeds thresholds.</English>
-            <Polish>Włącza objawy choroby popromiennej po przekroczeniu progów dawki promieniowania.</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSicknessRandomness">
-            <English>Radiation Sickness Randomness</English>
-            <Polish>Losowość choroby popromiennej</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSicknessRandomness_desc">
-            <English>Multiplier for symptom activation chance. 0 = never, 1 = normal, 2 = twice as likely.</English>
-            <Polish>Mnożnik szansy aktywacji objawów. 0 = nigdy, 1 = normalnie, 2 = dwukrotnie większa szansa.</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSicknessThresholdMultiplier">
-            <English>Radiation Sickness Threshold</English>
-            <Polish>Próg choroby popromiennej</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSicknessThresholdMultiplier_desc">
-            <English>Multiplier for all symptom thresholds. 0.1 = symptoms appear at 10% dose, 5 = symptoms appear at 5x dose.</English>
-            <Polish>Mnożnik wszystkich progów objawów. 0.1 = objawy przy 10% dawki, 5 = objawy przy 5x dawki.</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSymptomInterval">
-            <English>Symptom Tick Interval</English>
-            <Polish>Interwał ticka objawów</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSymptomInterval_desc">
-            <English>Seconds between each tick of all progressive symptoms (burns, bleeding, pain). The base damage is applied every tick and scales with radiation dose.</English>
-            <Polish>Sekundy między kolejnymi tickami wszystkich postępujących objawów (oparzenia, krwawienie, ból). Bazowe obrażenia są aplikowane co tick i skalują się z dawką.</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSeverityCoefficient">
-            <English>Damage Severity Coefficient</English>
-            <Polish>Współczynnik ostrości obrażeń</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSeverityCoefficient_desc">
-            <English>How much damage scales with dose above threshold. 0 = no scaling (flat damage), 0.5 = moderate, 1 = strong, 3 = very aggressive. Formula: baseDamage * (1 + coeff * doseAboveThreshold / threshold).</English>
-            <Polish>Jak bardzo obrażenia skalują się z dawką powyżej progu. 0 = brak skalowania, 0.5 = umiarkowane, 1 = silne, 3 = bardzo agresywne. Wzór: baseDamage * (1 + współczynnik * dawkaPowyżejProgu / próg).</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Large">
-            <English>Large Radiation Burn</English>
-            <Polish>Duże poparzenie od promieniowania</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Medium">
-            <English>Medium Radiation Burn</English>
-            <Polish>Średnie poparzenie od promieniowania</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Minor">
-            <English>Minor Radiation Burn</English>
-            <Polish>Małe poparzenie od promieniowania</Polish>
         </Key>
     </Package>
 </Project>

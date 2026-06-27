@@ -27,3 +27,7 @@ extends = "default"
 workshop = [
     "2020940806", # KAT - KAM
 ]
+
+[mission]
+extends = "default"
+mission = "promieniowanie.VR"

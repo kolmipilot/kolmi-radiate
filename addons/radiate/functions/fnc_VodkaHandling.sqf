@@ -43,7 +43,7 @@ private _newVodkaLevel = _vodkaLevel + 1;
 _unit setVariable [QGVAR(vodkaLevel), _newVodkaLevel, true];
 
 if (_newVodkaLevel >= 10) then {
-    [_unit, true] call ace_medical_fnc_setUnconscious;
+    [_unit, true] call ACEFUNC(medical,setUnconscious);
 };
 
 [ {

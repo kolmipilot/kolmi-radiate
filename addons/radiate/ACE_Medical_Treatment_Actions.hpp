@@ -24,7 +24,7 @@ class ACE_Medical_Treatment_Actions {
         callbackProgress = "";
         callbackStart = "";
         callbackFailure = "";
-        callbackSuccess = QFUNC(CheckRadiation);
+        callbackSuccess = QFUNC(CheckDosimeterMed);
         litter[] = {};
     };
     class CheckRadiation: CheckPulse {

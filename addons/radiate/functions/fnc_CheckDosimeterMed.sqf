@@ -18,9 +18,9 @@
 
 params ["_medic", "_patient"];
 
-private _radiationDose = _patient getVariable [QGVAR(radiationDose), 0];
+private _radiationDose = _patient getVariable [QGVAR(countedRadiationDose), 0];
 private _displayDose = _radiationDose * (random [0.9, 1, 1.1]);
 
 private _output = (_displayDose toFixed 1);
 
-[_patient, "quick_view", LLSTRING(CheckRadiation_Log), [_output]] call ACEFUNC(medical_treatment,addToLog);
+[_patient, "quick_view", LLSTRING(CheckDosimeter_Log), [_output]] call ACEFUNC(medical_treatment,addToLog);

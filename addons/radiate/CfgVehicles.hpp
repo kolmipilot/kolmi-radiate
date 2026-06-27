@@ -59,6 +59,35 @@ class CfgVehicles {
                         icon = QPATHTOF(ui\SimpleGeigerCounter.paa);
                     };
                 };
+                class kolmir_AdvancedGeigerCounter{
+                    displayName = CSTRING(AdvancedGeigerCounterMenu);
+                    icon = QPATHTOF(ui\AdvancedGeigerCounter.paa);
+                    exceptions[] = {"isNotSwimming"};
+                    class kolmir_AdvancedGeigerCounter_Enable {
+                        displayName = CSTRING(EnableAdvancedGeigerCounter);
+                        condition = QUOTE(([_player] call FUNC(hasAdvancedGeigerCounter)) && !(_player getVariable [ARR_2(QQGVAR(AdvancedGeigerCounterEnabled),false)]));
+                        exceptions[] = {"isNotSwimming"};
+                        statement = QUOTE([_player] call FUNC(enableAdvancedGeigerCounter));
+                        showDisabled = 0;
+                        icon = QPATHTOF(ui\AdvancedGeigerCounter.paa);
+                    };
+                    class kolmir_AdvancedGeigerCounter_SoundOn {
+                        displayName = CSTRING(EnableAdvancedGeigerCounterSound);
+                        condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(AdvancedGeigerCounterSound),false)]) && ([_player] call FUNC(hasAdvancedGeigerCounter)));
+                        exceptions[] = {"isNotSwimming"};
+                        statement = QUOTE(_player setVariable [ARR_3(QQGVAR(AdvancedGeigerCounterSound),true,true)]);
+                        showDisabled = 0;
+                        icon = QPATHTOF(ui\AdvancedGeigerCounter.paa);
+                    };
+                    class kolmir_AdvancedGeigerCounter_SoundOff {
+                        displayName = CSTRING(DisableAdvancedGeigerCounterSound);
+                        condition = QUOTE((_player getVariable [ARR_2(QQGVAR(AdvancedGeigerCounterSound),false)]) && ([_player] call FUNC(hasAdvancedGeigerCounter)));
+                        exceptions[] = {"isNotSwimming"};
+                        statement = QUOTE(_player setVariable [ARR_3(QQGVAR(AdvancedGeigerCounterSound),false,true)]);
+                        showDisabled = 0;
+                        icon = QPATHTOF(ui\AdvancedGeigerCounter.paa);
+                    };
+                };
             };
         };
     };

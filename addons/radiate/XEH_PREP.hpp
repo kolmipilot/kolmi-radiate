@@ -24,3 +24,6 @@ PREP(hasKAT);
 PREP(radiationSicknessPFH);
 PREP(handleRadiationSickness);
 PREP(applySymptomEffect);
+PREP(CheckDosimeterMed);
+PREP(hasAdvancedGeigerCounter);
+PREP(enableAdvancedGeigerCounter);

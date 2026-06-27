@@ -19,7 +19,9 @@
 params ["_logic", "_units", "_activated"];
 
 private _radius = _logic getVariable ["Radius", 20];
-private _radiationLevel = _logic getVariable ["Radiation_Type", 1];
+private _radiationIdx = _logic getVariable ["Radiation_Type", 0];
+private _radiationTypes = ["alpha", "beta", "gamma"];
+private _radiationLevel = if (_radiationIdx >= 0 && _radiationIdx < count _radiationTypes) then { _radiationTypes select _radiationIdx } else { "alpha" };
 
 if (count _units == 0) then {_units pushBack _logic;};
 

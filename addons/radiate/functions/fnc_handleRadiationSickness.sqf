@@ -115,20 +115,25 @@ if (_hasKAT) then {
             case "internalBleeding": {
                 _symptomTemplates set [_index, ["internalBleeding", 3100, 2300, "katInternalBleeding", 0.20, []]];
             };
+            /*
             case "fever": {
                 _symptomTemplates set [_index, ["fever", 3600, 2600, "katFever", 0.25, [3, 6, 1]]];
             };
+            */
             case "hypoxia": {
-                _symptomTemplates set [_index, ["hypoxia", 4600, 3600, "katHypoxia", 0.25, [120, 1, [50, 55, 0.80, 22, 7.25], 39, 760, 0, 0, 1]]];
+                _symptomTemplates set [_index, ["hypoxia", 4600, 3600, "katHypoxia", 0.25, [0.60, 60]]];
             };
             case "cardiacArrest": {
-                _symptomTemplates set [_index, ["cardiacArrest", 4800, 3800, "katCardiacArrest", 0.20, [1, true]]];
+                _symptomTemplates set [_index, ["cardiacArrest", 4800, 3800, "katCardiacArrest", 0.20, [4, true]]];
             };
             case "coagulationFailure": {
-                _symptomTemplates set [_index, ["coagulationFailure", 4200, 3200, "katCoagulation", 0.20, [8]]];
+                _symptomTemplates set [_index, ["coagulationFailure", 4200, 3200, "katCoagulation", 0.20, [15]]];
             };
             case "totalCoagulationFailure": {
-                _symptomTemplates set [_index, ["totalCoagulationFailure", 5000, 4000, "katCoagulation", 0.30, [10]]];
+                _symptomTemplates set [_index, ["totalCoagulationFailure", 5000, 4000, "katCoagulation", 0.30, [35]]];
+            };
+            case "collapsedLung": {
+                _symptomTemplates set [_index, ["collapsedLung", 5000, 4000, "katCollapsedLung", 0.30, [5]]];
             };
         };
     } forEach _symptomTemplates;

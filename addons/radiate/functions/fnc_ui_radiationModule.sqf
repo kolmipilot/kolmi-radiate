@@ -76,7 +76,9 @@ private _fnc_onConfirm = {
     private _ctrlRadius = _display displayCtrl 1611;
     private _radius = parseNumber ctrlText _ctrlRadius;
     private _ctrlRadiationType = _display displayCtrl 1617;
-    private _radiationLevel = lbCurSel _ctrlRadiationType;
+    private _radiationIdx = lbCurSel _ctrlRadiationType;
+    private _radiationTypes = ["alpha", "beta", "gamma"];
+    private _radiationLevel = if (_radiationIdx >= 0 && _radiationIdx < count _radiationTypes) then { _radiationTypes select _radiationIdx } else { "alpha" };
     private _center = objNull;
 
     if (isNull attachedTo _logic) then {

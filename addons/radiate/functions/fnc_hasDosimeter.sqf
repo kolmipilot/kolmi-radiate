@@ -16,4 +16,4 @@
 
 params ["_unit"];
 
-(('kolmir_SimpleDosimeter' in (items _unit)))
+(("kolmir_SimpleDosimeter" in (items _unit)))

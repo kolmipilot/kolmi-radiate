@@ -15,7 +15,7 @@
  * Public: No
  */
 
-// Zbierz wszystkie jednostki, które mogą być w promieniowaniu
+// Collect all units that may be in radiation zones
 private _unitsInZones = [];
 
 // Reset previous frame radiation values so intensity is momentary
@@ -27,10 +27,10 @@ private _unitsInZones = [];
 {
     _y params ["_radiationLogic", "_power", "_radiationType", "_condition", "_conditionArgs"];
 
-    // Ochrona przed zerową lub ujemną mocą
+    // Protection against zero or negative power
     if (_power <= 0) then { continue };
 
-    // Sprawdzenie warunku
+    // Check condition
     if !(_conditionArgs call _condition) then {
         detach _radiationLogic;
         deleteVehicle _radiationLogic;
@@ -38,26 +38,26 @@ private _unitsInZones = [];
         continue;
     };
 
-    // --- PROMIEŃ Z MOCY ---
-    // Dostosowany zasięg: większy radius, mniej efektywna radiacja
+    // --- RADIUS FROM POWER ---
+    // Adjusted range: larger radius, less effective radiation
     private _radius = sqrt(_power) * 3;
 
     {
         private _distance = _x distance _radiationLogic;
         if (_distance > _radius) then { continue };
 
-        // Odwrócona funkcja kwadratowa: intensity = power przy distance=0, 0 przy distance=radius
+        // Inverse square function: intensity = power at distance=0, 0 at distance=radius
         private _intensity = _power * (1 - ((_distance / _radius) ^ 2));
 
-        // Sumowanie intensywności
+        // Summing intensity
         private _prevIntensity = _x getVariable [QGVAR(areaIntensity), 0];
         _x setVariable [QGVAR(areaIntensity), _prevIntensity + _intensity, true];
 
-        // --- NOWA LOGIKA areaType ---
-        // Pobierz aktualną tablicę typów
+        // --- NEW areaType LOGIC ---
+        // Get current type array
         private _typeArray = _x getVariable [QGVAR(areaTypes), []];
 
-        // Szukamy czy typ już istnieje
+        // Check if type already exists
         private _found = false;
 
         {
@@ -67,7 +67,7 @@ private _unitsInZones = [];
             };
         } forEach _typeArray;
 
-        // Jeśli nie istnieje – dodaj nowy wpis
+        // If it doesn't exist - add new entry
         if (!_found) then {
             _typeArray pushBack [_radiationType, _intensity];
         };
@@ -81,7 +81,7 @@ private _unitsInZones = [];
     } forEach nearestObjects [_radiationLogic, ["CAManBase"], _radius];
 
 } forEach GVAR(RadiationSources);
-// Wyzeruj areaIntensity i areaTypes dla jednostek, które nie są już w żadnej strefie
+// Reset areaIntensity and areaTypes for units no longer in any zone
 {
     if (!(_x in _unitsInZones)) then {
         _x setVariable [QGVAR(areaTypes), [], true];

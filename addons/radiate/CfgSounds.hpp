@@ -69,7 +69,7 @@ class CfgSounds {
         name = QGVAR(Vomit);
         sound[] = {
             QPATHTOF(audio\vomit.ogg),
-            10,
+            15,
             1,
             5
         };

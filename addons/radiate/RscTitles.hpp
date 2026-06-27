@@ -29,7 +29,7 @@ class RscTitles
 {
     class kolmir_SimpleGeigerCounter
     {
-        idd = 18835;
+        idd = 18435;
         enableSimulation = 1;
         movingEnable = 0;
         fadeIn=0;
@@ -40,7 +40,7 @@ class RscTitles
         {   
             class kolmirChemIcon: RscPicture
             {
-                idc = 18801;
+                idc = 18401;
                 text = "\z\kolmir\addons\radiate\UI\SimpleGeigerCounter.paa";
                 x = QUOTE(SAFEZONE_X_RIGHTEDGE - FRAME_W(25) - FRAME_W(15));
                 y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(25));
@@ -49,7 +49,7 @@ class RscTitles
             };
             class kolmirChemStrength: RscText
             {
-                idc = 18805;
+                idc = 18405;
                 style = ST_RIGHT;
                 valign = "middle";
                 shadow = 0;
@@ -62,6 +62,59 @@ class RscTitles
                 colorBackground[] = {0,0,0,0};
                 colorText[] = {0.3,0.3,0.3,0.8};
                 sizeEx = QUOTE(FRAME_H(2.2));
+            };
+        };
+    };
+    class kolmir_AdvancedGeigerCounter
+    {
+        idd = 18535;
+        enableSimulation = 1;
+        movingEnable = 0;
+        fadeIn=0;
+        fadeOut=1;
+        duration = 10e10;
+        onLoad = "uiNamespace setVariable ['kolmir_AdvancedGeigerCounter', _this select 0];";
+        class controls
+        {   
+            class kolmirChemIcon: RscPicture
+            {
+                idc = 18501;
+                text = "\z\kolmir\addons\radiate\UI\AdvancedGeigerCounter.paa";
+                x = QUOTE(SAFEZONE_X_RIGHTEDGE - FRAME_W(25) - FRAME_W(5));
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(25));
+                w = QUOTE(FRAME_W(25));
+                h = QUOTE(FRAME_H(25));
+            };
+            class kolmirAdvancedChemStrength: RscText
+            {
+                idc = 18505;
+                style = ST_RIGHT;
+                valign = "middle";
+                shadow = 0;
+                font = "PuristaBold";
+                text = "0";
+                x = QUOTE(SAFEZONE_X_RIGHTEDGE - FRAME_W(25) + FRAME_W(3.5));
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(17.8));
+                w = QUOTE(FRAME_W(5));
+                h = QUOTE(FRAME_H(3));
+                colorBackground[] = {0,0,0,0};
+                colorText[] = {0.3,0.3,0.3,0.8};
+                sizeEx = QUOTE(FRAME_H(2.2));
+            };
+            class kolmirAdvancedChemStrength1: kolmirAdvancedChemStrength
+            {
+                idc = 18506;
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(14.5));
+            };
+            class kolmirAdvancedChemStrength2: kolmirAdvancedChemStrength
+            {
+                idc = 18507;
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(12.2));
+            };
+            class kolmirAdvancedChemStrength3: kolmirAdvancedChemStrength
+            {
+                idc = 18508;
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(9.8));
             };
         };
     };
