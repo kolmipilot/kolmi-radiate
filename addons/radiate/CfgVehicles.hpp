@@ -196,4 +196,20 @@ class CfgVehicles {
             MACRO_ADDITEM(kolmir_VodkaBottle,1);
         };
     };
+    class ACE_painkillersItem: Item_Base_F {};
+    class kolmir_PotassiumIodateItem: ACE_painkillersItem {
+        displayName = CSTRING(potassiumIodate);
+        vehicleClass = "Items";
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(kolmir_PotassiumIodate,1);
+        };
+    };
+    class kolmir_PrussianBlueItem: ACE_painkillersItem {
+        displayName = CSTRING(PrussianBlue);
+        vehicleClass = "Items";
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(kolmir_PrussianBlue,1);
+        };
+    };
+
 };

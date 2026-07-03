@@ -1,6 +1,7 @@
 class ACE_Medical_Treatment_Actions {
     class Morphine;
     class CheckPulse;
+    class Painkillers: Morphine {};
     class EDTA: Morphine {
         displayName = CSTRING(Take_EDTA);
         displayNameProgress = CSTRING(Using_EDTA);
@@ -10,7 +11,6 @@ class ACE_Medical_Treatment_Actions {
         condition = "";
         items[] = {"kolmir_EdtaAutoInjector"};
         callbackSuccess = QFUNC(medication);
-        sounds[] = {};
     };
     class CheckDosimeter: CheckPulse {
         displayName = CSTRING(CheckDosimeter_DisplayName);
@@ -42,26 +42,26 @@ class ACE_Medical_Treatment_Actions {
         callbackSuccess = QFUNC(CheckRadiation);
         litter[] = {};
     };
-    class PrussianBlue: Morphine {
+    class PrussianBlue: Painkillers {
         displayName = CSTRING(Administer_PrussianBlue);
         displayNameProgress = CSTRING(Using_PrussianBlue);
         allowedSelections[] = {"Head"};
         allowSelfTreatment = 1;
+        consumeItem = 1;
         treatmentTime = 4;
         condition = "";
         items[] = {"kolmir_PrussianBlue"};
         callbackSuccess = QFUNC(medication);
-        sounds[] = {};
     };
-    class PotassiumIodate: Morphine {
+    class PotassiumIodate: Painkillers {
         displayName = CSTRING(Administer_PotassiumIodate);
         displayNameProgress = CSTRING(Using_PotassiumIodate);
         allowedSelections[] = {"Head"};
         allowSelfTreatment = 1;
+        consumeItem = 1;
         treatmentTime = 4;
         condition = "";
         items[] = {"kolmir_PotassiumIodate"};
         callbackSuccess = QFUNC(medication);
-        sounds[] = {};
     };
 };

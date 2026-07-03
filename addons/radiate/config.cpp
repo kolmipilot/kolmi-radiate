@@ -11,6 +11,8 @@ class CfgPatches {
             "kolmir_module_radiation",
             "kolmir_module_zeus_radiation",
             "radiate_vodka_prop",
+            "kolmir_PotassiumIodateItem",
+            "kolmir_PrussianBlueItem",
         };
         weapons[] = {
             "kolmir_SimpleDosimeter",
@@ -20,14 +22,14 @@ class CfgPatches {
             "kolmir_VodkaBottle_Half",
             "kolmir_VodkaBottle_Empty",
             "kolmir_BloodTester",
-            "kolmir_PotassiumIodate",
-            "kolmir_PrussianBlue"
-
+            "kolmir_PotassiumIodate_Item",
+            "kolmir_PrussianBlue_Item"
         };
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "ui\RscAttributes.hpp"
 #include "RscTitles.hpp"

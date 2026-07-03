@@ -16,6 +16,7 @@ class CfgWeapons {
         };
     };
     class kolmir_EdtaAutoInjector: ACE_morphine {
+        author = "kolmipilot";
         scope = 2;
         displayName = CSTRING(EdtaAutoInjector);
         picture = QPATHTOF(ui\icon_EdtaAutoInjector.paa);
@@ -25,18 +26,14 @@ class CfgWeapons {
             mass = 0.5;
         };
     };
-    class kolmir_PotassiumIodate: ACE_ItemCore {
+     class ACE_painkillers_Item: ACE_ItemCore {};
+    class kolmir_PotassiumIodate_Item: ACE_painkillers_Item {
         displayName = CSTRING(potassiumIodate);
         author = "kolmipilot";
-        scope = 2;
-        scopeArsenal = 0;
         descriptionShort = CSTRING(potassiumIodate_desc);
         picture = QPATHTOF(ui\potasumIodineIco.paa);
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
-        };
     };
-    class kolmir_PrussianBlue: kolmir_PotassiumIodate {
+    class kolmir_PrussianBlue_Item: kolmir_PotassiumIodate_Item {
         displayName = CSTRING(PrussianBlue);
         descriptionShort = CSTRING(PrussianBlue_desc);
         picture = QPATHTOF(ui\PrussianBlueIco.paa);

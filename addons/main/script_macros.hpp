@@ -28,6 +28,11 @@
     count = COUNT; \
 }
 
+#define MACRO_ADDMAGAZINE(MAGAZINE,COUNT) class _xx_##MAGAZINE { \
+    magazine = #MAGAZINE; \
+    count = COUNT; \
+}
+
 // ACEX Merge
 #define ACEX_PREFIX acex
 #define XADDON DOUBLES(ACEX_PREFIX,COMPONENT)

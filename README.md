@@ -164,12 +164,12 @@ The system includes specialized medical items to manage accumulated radiation do
 
 ### Treatment Comparison
 
-| Item              | Base Reduction | Protection Bonus | Protection Duration | Efficiency Setting      |
-|-------------------|----------------|------------------|---------------------|-------------------------|
-| EDTA              | 400 mSv (10%)  | +10              | 180 s               | `edtaEfficiencyMultiplier` |
-| Prussian Blue     | 300 mSv (7.5%) | +10              | 180 s               | `PrussianBlueEfficiencyMultiplier` |
-| Potassium Iodate  | 200 mSv (5%)   | +20              | 180 s               | `potassiumIodateEfficiencyMultiplier` |
-| Vodka             | 40 mSv (1%)    | +5               | configurable        | `vodkaEfficiencyMultiplier` |
+| Item              | Base Reduction | Protection Bonus | Protection Duration | Efficiency Setting                   |
+|-------------------|----------------|------------------|---------------------|--------------------------------------|
+| EDTA              | 400 mSv (10%)  | +10              | 180 s               | `edtaEfficiencyMultiplier`           |
+| Prussian Blue     | 300 mSv (7.5%) | +10              | 180 s               | `PrussianBlueEfficiencyMultiplier`   |
+| Potassium Iodate  | 200 mSv (5%)   | +20              | 180 s               | `potassiumIodateEfficiencyMultiplier`|
+| Vodka             | 40 mSv (1%)    | +5               | configurable        | `vodkaEfficiencyMultiplier`          |
 
 ---
 
@@ -185,8 +185,8 @@ Symptoms are defined as templates. Each template has:
 | Field              | Description                                              |
 |--------------------|----------------------------------------------------------|
 | `symptomId`        | Unique string identifier                                 |
-| `thresholdOn`      | Dose (mSv) at which the symptom activates               |
-| `thresholdOff`     | Dose (mSv) at which the symptom deactivates (hysteresis)|
+| `thresholdOn`      | Dose (mSv) at which the symptom activates                |
+| `thresholdOff`     | Dose (mSv) at which the symptom deactivates (hysteresis) |
 | `effectType`       | What kind of in-game effect is applied                   |
 | `chance`           | Probability (0.0–1.0) per evaluation tick                |
 | `effectParams`     | Parameters passed to the effect handler                  |
@@ -248,15 +248,15 @@ severityMultiplier = 1 + (severityCoeff × (dose − thresholdOn) / thresholdOn)
 
 When the **KAT Extended Medical** mod is detected, several symptoms are automatically upgraded to use KAT-native effects:
 
-| Symptom              | ACE fallback          | KAT upgrade                                  |
-|----------------------|-----------------------|----------------------------------------------|
-| Vomiting             | Sound effect          | `kat_airway` puking sounds (no airway block) |
-| Internal Bleeding    | Blood volume loss     | `kat_circulation` internal bleeding (TXA-aware) |
-| Hypoxia              | Blood volume loss     | `kat_vitals` smooth SpO₂ drop to 60%         |
-| Cardiac Arrest       | ACE FatalVitals       | `kat_circulation` cardiac arrest (type 4 VT) |
-| Coagulation Failure  | Custom (no-op)        | `kat_pharma` coagulation factor reduction (lvl 15) |
-| Total Coag. Failure  | Custom (no-op)        | `kat_pharma` coagulation factor reduction (lvl 35) |
-| Collapsed Lung       | Pain increase         | `kat_breathing` pneumothorax + volume drop   |
+| Symptom              | ACE fallback          | KAT upgrade                                       |
+|----------------------|-----------------------|---------------------------------------------------|
+| Vomiting             | Sound effect          | `kat_airway` puking sounds (no airway block)      |
+| Internal Bleeding    | Blood volume loss     | `kat_circulation` internal bleeding (TXA-aware)   |
+| Hypoxia              | Blood volume loss     | `kat_vitals` smooth SpO₂ drop to 60%              |
+| Cardiac Arrest       | ACE FatalVitals       | `kat_circulation` cardiac arrest (type 4 VT)      |
+| Coagulation Failure  | Custom (no-op)        | `kat_pharma` coagulation factor reduction (lvl 15)|
+| Total Coag. Failure  | Custom (no-op)        | `kat_pharma` coagulation factor reduction (lvl 35)|
+| Collapsed Lung       | Pain increase         | `kat_breathing` pneumothorax + volume drop        |
 
 ---
 

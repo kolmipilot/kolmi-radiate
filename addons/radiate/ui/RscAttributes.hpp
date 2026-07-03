@@ -85,8 +85,8 @@ class GVAR(kolmir_RscAtributeRadius): RscControlsGroupNoScrollbars {
 
 
 class GVAR(kolmir_RscRadiationModul): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(kolmir_RscRadiationModul))] call EFUNC(zeus,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(kolmir_RscRadiationModul))] call EFUNC(zeus,zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(kolmir_RscRadiationModul))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(kolmir_RscRadiationModul))] call FUNC(zeusAttributes));
 
     class Controls: Controls {
         class Background: Background {};

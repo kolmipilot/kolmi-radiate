@@ -160,12 +160,12 @@ The system includes specialized medical items to manage accumulated radiation do
 
 ### Treatment Comparison
 
-| Item              | Base Reduction | Protection Bonus | Protection Duration | Efficiency Setting      |
-|-------------------|----------------|------------------|---------------------|-------------------------|
-| EDTA              | 400 mSv (10%)  | +10              | 180 s               | `edtaEfficiencyMultiplier` |
-| Prussian Blue     | 300 mSv (7.5%) | +10              | 180 s               | `PrussianBlueEfficiencyMultiplier` |
+| Item              | Base Reduction | Protection Bonus | Protection Duration | Efficiency Setting                    |
+|-------------------|----------------|------------------|---------------------|---------------------------------------|
+| EDTA              | 400 mSv (10%)  | +10              | 180 s               | `edtaEfficiencyMultiplier`            |
+| Prussian Blue     | 300 mSv (7.5%) | +10              | 180 s               | `PrussianBlueEfficiencyMultiplier`    |
 | Potassium Iodate  | 200 mSv (5%)   | +20              | 180 s               | `potassiumIodateEfficiencyMultiplier` |
-| Vodka             | 40 mSv (1%)    | +5               | configurable        | `vodkaEfficiencyMultiplier` |
+| Vodka             | 40 mSv (1%)    | +5               | configurable        | `vodkaEfficiencyMultiplier`           |
 
 ---
 

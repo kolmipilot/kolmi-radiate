@@ -7,6 +7,9 @@ GVAR(KATLoaded) = [] call FUNC(hasKAT);
 
 [QGVAR(handleUnitVitals), LINKFUNC(handleUnitVitals)] call CBA_fnc_addEventHandler;
 
+["kolmir_PotassiumIodate_Item", "kolmir_PotassiumIodate"] call ace_common_fnc_registerItemReplacement;
+["kolmir_PrussianBlue_Item", "kolmir_PrussianBlue"] call ace_common_fnc_registerItemReplacement;
+
 [QGVAR(EDTALocal), LINKFUNC(treatmentAdvanced_EDTALocal)] call CBA_fnc_addEventHandler;
 [QGVAR(medicationLocal), LINKFUNC(medicationLocal)] call CBA_fnc_addEventHandler;
 ["acex_rationConsumed", LINKFUNC(drinkVodka)] call CBA_fnc_addEventHandler;
