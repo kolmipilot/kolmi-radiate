@@ -25,6 +25,22 @@ class CfgWeapons {
             mass = 0.5;
         };
     };
+    class kolmir_PotassiumIodate: ACE_ItemCore {
+        displayName = CSTRING(potassiumIodate);
+        author = "kolmipilot";
+        scope = 2;
+        scopeArsenal = 0;
+        descriptionShort = CSTRING(potassiumIodate_desc);
+        picture = QPATHTOF(ui\potasumIodineIco.paa);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
+    };
+    class kolmir_PrussianBlue: kolmir_PotassiumIodate {
+        displayName = CSTRING(PrussianBlue);
+        descriptionShort = CSTRING(PrussianBlue_desc);
+        picture = QPATHTOF(ui\PrussianBlueIco.paa);
+    };
     class kolmir_BloodTester: ACE_ItemCore {
         scope = 2;
         displayName = CSTRING(BloodTester);

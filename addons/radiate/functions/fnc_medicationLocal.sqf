@@ -40,3 +40,11 @@ if (_className isEqualTo "EDTA") then {
     // EDTA does not use _bodyPart for its effect, only _patient
     [QGVAR(EDTALocal), [_patient], _patient] call CBA_fnc_targetEvent;
 };
+if (_className isEqualTo "PrussianBlue") then {
+    // PrussianBlue does not use _bodyPart for its effect, only _patient
+    [QGVAR(PrussianBlueLocal), [_patient], _patient] call CBA_fnc_targetEvent;
+};
+if (_className isEqualTo "PotassiumIodate") then {
+    // PotassiumIodate does not use _bodyPart for its effect, only _patient
+    [QGVAR(PotassiumIodateLocal), [_patient], _patient] call CBA_fnc_targetEvent;
+};

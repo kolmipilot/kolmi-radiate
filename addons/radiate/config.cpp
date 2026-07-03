@@ -19,7 +19,9 @@ class CfgPatches {
             "kolmir_VodkaBottle",
             "kolmir_VodkaBottle_Half",
             "kolmir_VodkaBottle_Empty",
-            "kolmir_BloodTester"
+            "kolmir_BloodTester",
+            "kolmir_PotassiumIodate",
+            "kolmir_PrussianBlue"
 
         };
     };

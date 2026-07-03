@@ -27,6 +27,8 @@ private _allLocalUnits = allUnits select { local _x };
     if (_radiationDose <= 0) then { continue };
 
     // Handle radiation sickness based on accumulated dose
-    [_x] call FUNC(handleRadiationSickness);
+    if (isDamageAllowed _x) then {
+        [_x] call FUNC(handleRadiationSickness);
+    };
 
 } forEach _allLocalUnits;

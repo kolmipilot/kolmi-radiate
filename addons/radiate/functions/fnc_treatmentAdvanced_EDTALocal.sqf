@@ -14,12 +14,13 @@
 
 params ["_patient"];
 
+private _edtaEfficiency = missionNamespace getVariable [QGVAR(edtaEfficiencyMultiplier), 1.0];
 private _radiationDose = _patient getVariable [QGVAR(radiationDose), 0];
-private _newRadiationDose = (_radiationDose - 400) max 0; // Reduce radiation dose by 400 units (10% of lethal dose)
+private _newRadiationDose = (_radiationDose - (400 * _edtaEfficiency)) max 0; // 1.0 = 400 (10% lethal), 10.0 = 4000 (100% lethal)
 _patient setVariable [QGVAR(radiationDose), _newRadiationDose, true];
 
 private _medicationProtection = _patient getVariable [QGVAR(medicationProtection), 0];
-private _newMedicationProtection = _medicationProtection + 10;
+private _newMedicationProtection = _medicationProtection + (10 * _edtaEfficiency);
 _patient setVariable [QGVAR(medicationProtection), _newMedicationProtection, true];
 
 [ {

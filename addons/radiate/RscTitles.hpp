@@ -93,18 +93,18 @@ class RscTitles
                 shadow = 0;
                 font = "PuristaBold";
                 text = "0";
-                x = QUOTE(SAFEZONE_X_RIGHTEDGE - FRAME_W(25) + FRAME_W(3.5));
-                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(17.8));
+                x = QUOTE(SAFEZONE_X_RIGHTEDGE - FRAME_W(25) + FRAME_W(4.5));
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(17.7));
                 w = QUOTE(FRAME_W(5));
                 h = QUOTE(FRAME_H(3));
                 colorBackground[] = {0,0,0,0};
-                colorText[] = {0.3,0.3,0.3,0.8};
-                sizeEx = QUOTE(FRAME_H(2.2));
+                colorText[] = {0,0,0,1};
+                sizeEx = QUOTE(FRAME_H(2.0));
             };
             class kolmirAdvancedChemStrength1: kolmirAdvancedChemStrength
             {
                 idc = 18506;
-                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(14.5));
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(14.9));
             };
             class kolmirAdvancedChemStrength2: kolmirAdvancedChemStrength
             {
@@ -114,7 +114,7 @@ class RscTitles
             class kolmirAdvancedChemStrength3: kolmirAdvancedChemStrength
             {
                 idc = 18508;
-                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(9.8));
+                y = QUOTE(SAFEZONE_Y_LOWEDGE - FRAME_H(9.5));
             };
         };
     };

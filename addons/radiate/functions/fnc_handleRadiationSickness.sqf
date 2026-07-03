@@ -141,7 +141,7 @@ if (_hasKAT) then {
 
 // --- CONFIGURABLE COEFFICIENTS ---
 private _randomness = missionNamespace getVariable [QGVAR(radiationSicknessRandomness), 1.0];
-private _thresholdMultiplier = missionNamespace getVariable [QGVAR(radiationSicknessThresholdMultiplier), 1.0];
+private _symptomSpeed = missionNamespace getVariable [QGVAR(radiationSicknessSpeed), 1.0];
 private _symptomInterval = missionNamespace getVariable [QGVAR(radiationSymptomInterval), 5];
 
 // Damage severity coefficient — scales all damage with dose above threshold
@@ -165,8 +165,9 @@ private _currentTime = CBA_missionTime;
         _repeatInterval = _symptomInterval;
     };
 
-    private _adjustedThresholdOn = _thresholdOn * _thresholdMultiplier;
-    private _adjustedThresholdOff = _thresholdOff * _thresholdMultiplier;
+    // Higher symptomSpeed = lower thresholds = symptoms appear faster
+    private _adjustedThresholdOn = _thresholdOn / _symptomSpeed;
+    private _adjustedThresholdOff = _thresholdOff / _symptomSpeed;
     private _adjustedChance = (_chance * _randomness) min 1.0;
 
     // Calculate how far above threshold the dose is (0 = at threshold, 1 = 2x threshold)

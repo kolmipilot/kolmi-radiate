@@ -27,3 +27,5 @@ PREP(applySymptomEffect);
 PREP(CheckDosimeterMed);
 PREP(hasAdvancedGeigerCounter);
 PREP(enableAdvancedGeigerCounter);
+PREP(treatmentAdvanced_PrussianBlueLocal);
+PREP(treatmentAdvanced_PotassiumIodateLocal);

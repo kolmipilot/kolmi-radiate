@@ -77,6 +77,38 @@
             <English>Auto-injector containing EDTA for radiation treatment.</English>
             <Polish>Autostrzykawka zawierająca EDTA do leczenia napromieniowania.</Polish>
         </Key>
+        <Key ID="str_kolmir_radiate_potassiumIodate">
+            <English>Potassium Iodate</English>
+            <Polish>Jodan Potasu</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_potassiumIodate_desc">
+            <English>Potassium Iodate for radiation treatment.</English>
+            <Polish>Jodan Potasu do leczenia napromieniowania.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_Administer_potassiumIodate">
+            <English>Administer Potassium Iodate</English>
+            <Polish>Podaj Jodan Potasu</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_Using_potassiumIodate">
+            <English>Administering Potassium Iodate</English>
+            <Polish>Podawanie Jodanu Potasu</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_PrussianBlue">
+            <English>Prussian Blue</English>
+            <Polish>Błękit Pruski</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_Administer_PrussianBlue">
+            <English>Administer Prussian Blue</English>
+            <Polish>Podaj Błękit Pruski</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_Using_PrussianBlue">
+            <English>Administering Prussian Blue</English>
+            <Polish>Podawanie Błękitu Pruskiego</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_PrussianBlue_desc">
+            <English>Prussian Blue for radiation treatment.</English>
+            <Polish>Błękit Pruski do leczenia napromieniowania.</Polish>
+        </Key>
         <Key ID="str_kolmir_radiate_EnableAdvancedGeigerCounter">
             <English>Enable Advanced Geiger Counter</English>
             <Polish>Włącz zaawansowany licznik Geigera</Polish>
@@ -222,13 +254,13 @@
             <English>Multiplier for symptom activation chance. 0 = never, 1 = normal, 2 = twice as likely.</English>
             <Polish>Mnożnik szansy aktywacji objawów. 0 = nigdy, 1 = normalnie, 2 = dwukrotnie większa szansa.</Polish>
         </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSicknessThresholdMultiplier">
-            <English>Radiation Sickness Threshold</English>
-            <Polish>Próg choroby popromiennej</Polish>
+        <Key ID="str_kolmir_radiate_setting_radiationSicknessSpeed">
+            <English>Radiation Sickness Speed</English>
+            <Polish>Szybkość choroby popromiennej</Polish>
         </Key>
-        <Key ID="str_kolmir_radiate_setting_radiationSicknessThresholdMultiplier_desc">
-            <English>Multiplier for all symptom thresholds. 0.1 = symptoms appear at 10% dose, 5 = symptoms appear at 5x dose.</English>
-            <Polish>Mnożnik wszystkich progów objawów. 0.1 = objawy przy 10% dawki, 5 = objawy przy 5x dawki.</Polish>
+        <Key ID="str_kolmir_radiate_setting_radiationSicknessSpeed_desc">
+            <English>How fast symptoms appear. Higher = symptoms trigger at lower radiation doses. 1.0 = normal, 2.0 = twice as fast (half the dose needed), 0.5 = half as fast (double the dose needed).</English>
+            <Polish>Jak szybko pojawiają się objawy. Wyższe = objawy przy niższej dawce. 1.0 = normalnie, 2.0 = dwa razy szybciej (połowa dawki), 0.5 = dwa razy wolniej (podwójna dawka).</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_setting_radiationSymptomInterval">
             <English>Symptom Tick Interval</English>
@@ -237,14 +269,6 @@
         <Key ID="str_kolmir_radiate_setting_radiationSymptomInterval_desc">
             <English>Seconds between each tick of all progressive symptoms (burns, bleeding, pain). The base damage is applied every tick and scales with radiation dose.</English>
             <Polish>Sekundy między kolejnymi tickami wszystkich postępujących objawów (oparzenia, krwawienie, ból). Bazowe obrażenia są aplikowane co tick i skalują się z dawką.</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaDecayTime">
-            <English>Vodka Level Decay Time (Seconds)</English>
-            <Polish>Czas zanikania poziomu wódki (Sekundy)</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaDecayTime_desc">
-            <English>Time in seconds for the vodka level to decrease by one drink.</English>
-            <Polish>Czas w sekundach, po którym poziom wódki spada o jedną jednostkę.</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_setting_vodkaDrinkTime">
             <English>Vodka Drinking Time (Seconds)</English>
@@ -317,6 +341,38 @@
         <Key ID="str_kolmir_radiate_vodkabottlehalf_displayname">
             <English>Vodka Bottle (Half)</English>
             <Polish>Butelka wódki (Połowa)</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaEfficiencyMultiplier">
+            <English>Vodka Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności wódki</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaEfficiencyMultiplier_desc">
+            <English>Multiplier for vodka radiation reduction. 1.0 = reduces 40 mSv (1% of lethal dose), 10.0 = reduces 400 mSv (10% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez wódkę. 1.0 = redukuje 40 mSv (1% dawki śmiertelnej), 10.0 = redukuje 400 mSv (10% dawki śmiertelnej).</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_edtaEfficiencyMultiplier">
+            <English>EDTA Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności EDTA</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_edtaEfficiencyMultiplier_desc">
+            <English>Multiplier for EDTA radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez EDTA. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_prussianBlueEfficiencyMultiplier">
+            <English>Prussian Blue Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności błękitu pruskiego</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_prussianBlueEfficiencyMultiplier_desc">
+            <English>Multiplier for Prussian Blue radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez błękit pruski. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_potassiumIodateEfficiencyMultiplier">
+            <English>Potassium Iodate Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności jodanu potasu</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_potassiumIodateEfficiencyMultiplier_desc">
+            <English>Multiplier for Potassium Iodate radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez jodan potasu. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
         </Key>
     </Package>
 </Project>

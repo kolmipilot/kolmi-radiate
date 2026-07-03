@@ -123,13 +123,29 @@ The system includes specialized medical items to manage accumulated radiation do
 ### EDTA Auto-Injector
 
 - **Type:** Medical Item (ACE Medical)
-- **Effect:** Reduces radiation dose by **400 units** (10% of lethal dose) per injection.
+- **Effect:** Reduces radiation dose by **400 units** (10% of lethal dose) per injection. Provides +10 temporary radiation protection for 180 seconds.
+- **Efficiency Multiplier:** Configurable via CBA setting (default 1.0, range 0.1–10.0).
 - **Usage:** Applied through the ACE Medical treatment menu on arms or legs.
+
+### Prussian Blue
+
+- **Type:** Medical Item (ACE Medical)
+- **Effect:** Reduces radiation dose by **300 units** (7.5% of lethal dose) per dose. Provides +10 temporary radiation protection for 180 seconds.
+- **Efficiency Multiplier:** Configurable via CBA setting (default 1.0, range 0.1–10.0).
+- **Usage:** Applied through the ACE Medical treatment menu.
+
+### Potassium Iodate
+
+- **Type:** Medical Item (ACE Medical)
+- **Effect:** Reduces radiation dose by **200 units** (5% of lethal dose) per dose. Provides +20 temporary radiation protection for 180 seconds (stronger protection than EDTA or Prussian Blue).
+- **Efficiency Multiplier:** Configurable via CBA setting (default 1.0, range 0.1–10.0).
+- **Usage:** Applied through the ACE Medical treatment menu.
 
 ### Absolute Vodka
 
 - **Type:** Consumable
-- **Effect:** Reduces radiation dose by **40 units** (1% of lethal dose) per drink.
+- **Effect:** Reduces radiation dose by **40 units** (1% of lethal dose) per drink. Provides +5 temporary radiation protection. Adds vodka level for visual effects (chromatic aberration).
+- **Efficiency Multiplier:** Configurable via CBA setting (default 1.0, range 0.1–10.0).
 - **Progression:** Full Bottle → Half Bottle → Empty Bottle.
 - **Usage:** Can be consumed through self-interaction or inventory actions.
 
@@ -142,6 +158,15 @@ The system includes specialized medical items to manage accumulated radiation do
 - **Effect:** Measures the patient's accumulated radiation dose with a realistic variance of ±5% and logs the result in the patient's ACE Medical log (e.g., `Radiation Check: 120.5`).
 - **Consumption:** Reusable item; is not consumed upon use.
 
+### Treatment Comparison
+
+| Item              | Base Reduction | Protection Bonus | Protection Duration | Efficiency Setting      |
+|-------------------|----------------|------------------|---------------------|-------------------------|
+| EDTA              | 400 mSv (10%)  | +10              | 180 s               | `edtaEfficiencyMultiplier` |
+| Prussian Blue     | 300 mSv (7.5%) | +10              | 180 s               | `PrussianBlueEfficiencyMultiplier` |
+| Potassium Iodate  | 200 mSv (5%)   | +20              | 180 s               | `potassiumIodateEfficiencyMultiplier` |
+| Vodka             | 40 mSv (1%)    | +5               | configurable        | `vodkaEfficiencyMultiplier` |
+
 ---
 
 ## Summary
@@ -152,3 +177,5 @@ The system includes specialized medical items to manage accumulated radiation do
 - Protection effectiveness depends on radiation type
 - Dose accumulates per second and converts correctly from mSv/h
 - Reusable **Blood Tester** allows checking patient radiation dose via the ACE Medical examine menu
+- Three medical treatments available: **EDTA**, **Prussian Blue**, and **Potassium Iodate** — each with configurable efficiency
+- **Absolute Vodka** provides minor radiation reduction with visual side effects

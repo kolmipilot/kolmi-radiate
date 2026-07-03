@@ -78,15 +78,6 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(vodkaDecayTime),
-    "SLIDER",
-    [LLSTRING(setting_vodkaDecayTime), LLSTRING(setting_vodkaDecayTime_desc)],
-    CBA_SETTINGS_CAT,
-    [10, 1200, 240, 0],
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(vodkaProtectionDuration),
     "SLIDER",
     [LLSTRING(setting_vodkaProtectionDuration), LLSTRING(setting_vodkaProtectionDuration_desc)],
@@ -113,6 +104,42 @@
     1
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(vodkaEfficiencyMultiplier),
+    "SLIDER",
+    [LLSTRING(setting_vodkaEfficiencyMultiplier), LLSTRING(setting_vodkaEfficiencyMultiplier_desc)],
+    CBA_SETTINGS_CAT,
+    [0.1, 10, 1, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(edtaEfficiencyMultiplier),
+    "SLIDER",
+    [LLSTRING(setting_edtaEfficiencyMultiplier), LLSTRING(setting_edtaEfficiencyMultiplier_desc)],
+    CBA_SETTINGS_CAT,
+    [0.1, 10, 1, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(potassiumIodateEfficiencyMultiplier),
+    "SLIDER",
+    [LLSTRING(setting_potassiumIodateEfficiencyMultiplier), LLSTRING(setting_potassiumIodateEfficiencyMultiplier_desc)],
+    CBA_SETTINGS_CAT,
+    [0.1, 10, 1, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(prussianBlueEfficiencyMultiplier),
+    "SLIDER",
+    [LLSTRING(setting_prussianBlueEfficiencyMultiplier), LLSTRING(setting_prussianBlueEfficiencyMultiplier_desc)],
+    CBA_SETTINGS_CAT,
+    [0.1, 10, 1, 1],
+    1
+] call CBA_fnc_addSetting;
+
 // --- Radiation Sickness Settings ---
 [
     QGVAR(radiationSicknessRandomness),
@@ -124,9 +151,9 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(radiationSicknessThresholdMultiplier),
+    QGVAR(radiationSicknessSpeed),
     "SLIDER",
-    [LLSTRING(setting_radiationSicknessThresholdMultiplier), LLSTRING(setting_radiationSicknessThresholdMultiplier_desc)],
+    [LLSTRING(setting_radiationSicknessSpeed), LLSTRING(setting_radiationSicknessSpeed_desc)],
     CBA_SETTINGS_CAT,
     [0.1, 5, 1, 1],
     1

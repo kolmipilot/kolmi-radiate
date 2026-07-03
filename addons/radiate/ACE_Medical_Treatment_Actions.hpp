@@ -42,4 +42,26 @@ class ACE_Medical_Treatment_Actions {
         callbackSuccess = QFUNC(CheckRadiation);
         litter[] = {};
     };
+    class PrussianBlue: Morphine {
+        displayName = CSTRING(Administer_PrussianBlue);
+        displayNameProgress = CSTRING(Using_PrussianBlue);
+        allowedSelections[] = {"Head"};
+        allowSelfTreatment = 1;
+        treatmentTime = 4;
+        condition = "";
+        items[] = {"kolmir_PrussianBlue"};
+        callbackSuccess = QFUNC(medication);
+        sounds[] = {};
+    };
+    class PotassiumIodate: Morphine {
+        displayName = CSTRING(Administer_PotassiumIodate);
+        displayNameProgress = CSTRING(Using_PotassiumIodate);
+        allowedSelections[] = {"Head"};
+        allowSelfTreatment = 1;
+        treatmentTime = 4;
+        condition = "";
+        items[] = {"kolmir_PotassiumIodate"};
+        callbackSuccess = QFUNC(medication);
+        sounds[] = {};
+    };
 };

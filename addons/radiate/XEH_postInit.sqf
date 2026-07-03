@@ -10,6 +10,8 @@ GVAR(KATLoaded) = [] call FUNC(hasKAT);
 [QGVAR(EDTALocal), LINKFUNC(treatmentAdvanced_EDTALocal)] call CBA_fnc_addEventHandler;
 [QGVAR(medicationLocal), LINKFUNC(medicationLocal)] call CBA_fnc_addEventHandler;
 ["acex_rationConsumed", LINKFUNC(drinkVodka)] call CBA_fnc_addEventHandler;
+[QGVAR(PrussianBlueLocal), LINKFUNC(treatmentAdvanced_PrussianBlueLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(PotassiumIodateLocal), LINKFUNC(treatmentAdvanced_PotassiumIodateLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(playTone), {
     params ["_unit", "_tone"];

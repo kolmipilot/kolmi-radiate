@@ -17,7 +17,8 @@ TRACE_1("drinkVodka",_unit);
 
 if (!alive _unit) exitWith {false};
 
-private _reductionPerDrink = 40; // Amount of radiation to reduce (1% of lethal dose)
+private _vodkaEfficiency = missionNamespace getVariable [QGVAR(vodkaEfficiencyMultiplier), 1.0];
+private _reductionPerDrink = 40 * _vodkaEfficiency; // 1.0 = 40 (1% lethal), 10.0 = 400 (10% lethal)
 private _radiationDose = _unit getVariable [QGVAR(radiationDose), 0];
 
 private _newRadiationDose = (_radiationDose - _reductionPerDrink) max 0;
@@ -52,7 +53,7 @@ if (_newVodkaLevel >= 10) then {
     _unit setVariable [QGVAR(vodkaLevel), (_vodkaLevel - 1) max 0, true];  
     TRACE_1("Vodka level decreased",_unit); 
 }, 
-[_unit], 240] call CBA_fnc_waitAndExecute;
+[_unit], _protectionDuration] call CBA_fnc_waitAndExecute;
 
 
 TRACE_2("Vodka consumed, radiation reduced",_unit,_newRadiationDose);

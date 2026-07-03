@@ -27,7 +27,7 @@ _unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime, true];
 // Pobierz typy promieniowania (2D array)
 private _areaTypes = _unit getVariable [QGVAR(areaTypes), []];
 
-if ((count _areaTypes) > 0) then {
+if ((count _areaTypes) > 0 && isDamageAllowed _unit) then {
 
     private _radiationDose = _unit getVariable [QGVAR(radiationDose), 0];
     private _countedRadiationDose = _unit getVariable [QGVAR(countedRadiationDose), 0];
