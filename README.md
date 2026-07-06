@@ -7,6 +7,13 @@ known bugs:
 
 - zeus module dosent work as intented. It opens two times window, just type values two times and click okay. Everything should work then. Will be fixed soon.
 
+future plans:
+
+- Improve geiger counter sounds
+- Improve radiation sickness system
+- Add more devices types
+- Add custom models to all items
+
 **Contribution:**
 Leave feedback on the Steam Workshop page or report bugs via GitHub.
 
