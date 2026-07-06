@@ -2,6 +2,14 @@
 
 Mod introduces new ultimate radiation system to the Arma 3. It includes multiple devices, advanced radiation system, medical symptoms, and even more.
 
+**Mod is still WIP:**
+known bugs:
+
+- zeus module dosent work as intented. It opens two times window, just type values two times and click okay. Everything should work then. Will be fixed soon.
+
+**Contribution:**
+Leave feedback on the Steam Workshop page or report bugs via GitHub.
+
 ## Radiate
 
 To create a radiation zone use the module from Eden or Zeus.
