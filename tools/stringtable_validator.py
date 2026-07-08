@@ -17,7 +17,6 @@ import xml.etree.ElementTree as ET
 
 ######## GLOBALS #########
 PROJECT_NAME = "KOLMIR"
-ID_PREFIX = "STR_KOLMIR_"
 ##########################
 
 
@@ -48,11 +47,14 @@ def check_stringtable(filepath):
         print("  ERROR: Failed to find 'Package' tag under 'Project' tag.")
         errors += 1
     else:
-
         package_name = package.get("name")
-        # Wymagaj wielkiej litery na początku Package
-        if not (package_name and package_name[0].isupper()):
-            print("  ERROR: Package name attribute '{}' should start with a capital letter.".format(package_name))
+
+        if package_name.islower():
+            print("  ERROR: Package name attribute '{}' is all lowercase, should be in titlecase.".format(package_name))
+            errors += 1
+
+        if package_name.lower() != os.path.basename(os.path.dirname(filepath)):
+            print("  ERROR: Package name attribute '{}' does not match the component folder name.".format(package_name))
             errors += 1
 
         # Get all keys contained in the stringtable
@@ -62,27 +64,22 @@ def check_stringtable(filepath):
             keys.extend(container.findall("Key"))
 
         key_ids = []
-
-        key_prefix = ID_PREFIX.lower()
+        key_prefix = "STR_{}_{}_".format(PROJECT_NAME, package_name)
 
         for key in keys:
             key_id = key.get("ID")
             
             # Skip keys that start with "STR_ACE_"
+            if key_id.startswith("STR_ACE_"):
+                continue
 
+            # Verify that the key has a valid ID attribute
             if key_id is None:
                 print("  ERROR: Key '{}' had no ID attribute.".format(key_id))
                 errors += 1
-            elif not key_id.startswith(key_prefix):
-                print("  ERROR: Key '{}' does not have a valid ID attribute, should start with {} (case-insensitive).".format(key_id, key_prefix))
+            elif key_id.find(key_prefix) != 0:
+                print("  ERROR: Key '{}' does not have a valid ID attribute, should be in format {}{{name}}.".format(key_id, key_prefix))
                 errors += 1
-            # Akceptuj małe litery i podkreślenia po prefixie
-            import re
-            if key_id.startswith(key_prefix):
-                rest = key_id[len(key_prefix):]
-                if not re.match(r"[a-z0-9_]+", rest):
-                    print("  ERROR: Key '{}' should use only lowercase letters, numbers and underscores after prefix (e.g. str_kolmir_radiate_lvl0_radiation).".format(key_id))
-                    errors += 1
 
             key_ids.append(key_id)
 
@@ -101,16 +98,9 @@ def check_stringtable(filepath):
                     print("  ERROR: Key '{}' has an Original translation, unnecessary with English as first.".format(key_id))
                     errors += 1
 
-
                 if entries[0].tag != "English":
                     print("  ERROR: Key '{}' does not have its English translation listed first.".format(key_id))
                     errors += 1
-
-                # Wymagaj wielkiej litery w nazwach języków
-                for lang in entries:
-                    if not lang.tag[0].isupper():
-                        print("  ERROR: Language tag '{}' should start with a capital letter.".format(lang.tag))
-                        errors += 1
 
                 languages = list(map(lambda l: l.tag, entries))
 

@@ -13,6 +13,14 @@
             <English>Minor Radiation Burn</English>
             <Polish>Małe poparzenie od promieniowania</Polish>
         </Key>
+        <Key ID="str_kolmir_radiate_Administer_PrussianBlue">
+            <English>Administer Prussian Blue</English>
+            <Polish>Podaj Błękit Pruski</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_Administer_potassiumIodate">
+            <English>Administer Potassium Iodate</English>
+            <Polish>Podaj Jodan Potasu</Polish>
+        </Key>
         <Key ID="str_kolmir_radiate_AdvancedGeigerCounter">
             <English>Advanced Geiger Counter</English>
             <Polish>Zaawansowany licznik Geigera</Polish>
@@ -77,38 +85,6 @@
             <English>Auto-injector containing EDTA for radiation treatment.</English>
             <Polish>Autostrzykawka zawierająca EDTA do leczenia napromieniowania.</Polish>
         </Key>
-        <Key ID="str_kolmir_radiate_potassiumIodate">
-            <English>Potassium Iodate</English>
-            <Polish>Jodan Potasu</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_potassiumIodate_desc">
-            <English>Potassium Iodate for radiation treatment.</English>
-            <Polish>Jodan Potasu do leczenia napromieniowania.</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_Administer_potassiumIodate">
-            <English>Administer Potassium Iodate</English>
-            <Polish>Podaj Jodan Potasu</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_Using_potassiumIodate">
-            <English>Administering Potassium Iodate</English>
-            <Polish>Podawanie Jodanu Potasu</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_PrussianBlue">
-            <English>Prussian Blue</English>
-            <Polish>Błękit Pruski</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_Administer_PrussianBlue">
-            <English>Administer Prussian Blue</English>
-            <Polish>Podaj Błękit Pruski</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_Using_PrussianBlue">
-            <English>Administering Prussian Blue</English>
-            <Polish>Podawanie Błękitu Pruskiego</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_PrussianBlue_desc">
-            <English>Prussian Blue for radiation treatment.</English>
-            <Polish>Błękit Pruski do leczenia napromieniowania.</Polish>
-        </Key>
         <Key ID="str_kolmir_radiate_EnableAdvancedGeigerCounter">
             <English>Enable Advanced Geiger Counter</English>
             <Polish>Włącz zaawansowany licznik Geigera</Polish>
@@ -128,6 +104,14 @@
         <Key ID="str_kolmir_radiate_KOLMIR_Actions">
             <English>Radiate</English>
             <Polish>Radiate</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_PrussianBlue">
+            <English>Prussian Blue</English>
+            <Polish>Błękit Pruski</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_PrussianBlue_desc">
+            <English>Prussian Blue for radiation treatment.</English>
+            <Polish>Błękit Pruski do leczenia napromieniowania.</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_SimpleDosimeter">
             <English>Simple Dosimeter</English>
@@ -152,6 +136,14 @@
         <Key ID="str_kolmir_radiate_Using_EDTA">
             <English>Injecting EDTA</English>
             <Polish>Wstrzykiwanie EDTA</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_Using_PrussianBlue">
+            <English>Administering Prussian Blue</English>
+            <Polish>Podawanie Błękitu Pruskiego</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_Using_potassiumIodate">
+            <English>Administering Potassium Iodate</English>
+            <Polish>Podawanie Jodanu Potasu</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_cba_name">
             <English>kolmi - Radiate</English>
@@ -178,6 +170,14 @@
         </Key>
         <Key ID="str_kolmir_radiate_lvl2_radiation">
             <English>Gamma ray</English>
+        </Key>
+        <Key ID="str_kolmir_radiate_potassiumIodate">
+            <English>Potassium Iodate</English>
+            <Polish>Jodan Potasu</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_potassiumIodate_desc">
+            <English>Potassium Iodate for radiation treatment.</English>
+            <Polish>Jodan Potasu do leczenia napromieniowania.</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_radiationmodule_createcontaminatedzone">
             <English>Create contaminated zone</English>
@@ -222,6 +222,14 @@
             <English>Available Suits</English>
             <Polish>Dostępne kombinezony</Polish>
         </Key>
+        <Key ID="str_kolmir_radiate_setting_edtaEfficiencyMultiplier">
+            <English>EDTA Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności EDTA</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_edtaEfficiencyMultiplier_desc">
+            <English>Multiplier for EDTA radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez EDTA. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
+        </Key>
         <Key ID="str_kolmir_radiate_setting_enableRadiationSickness">
             <English>Enable Radiation Sickness</English>
             <Polish>Włącz chorobę popromienną</Polish>
@@ -237,6 +245,22 @@
         <Key ID="str_kolmir_radiate_setting_enableVodkaEffect_desc">
             <English>Enables chromatic aberration when drinking too much vodka.</English>
             <Polish>Włącza aberrację chromatyczną po wypiciu zbyt dużej ilości wódki.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_potassiumIodateEfficiencyMultiplier">
+            <English>Potassium Iodate Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności jodanu potasu</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_potassiumIodateEfficiencyMultiplier_desc">
+            <English>Multiplier for Potassium Iodate radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez jodan potasu. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_prussianBlueEfficiencyMultiplier">
+            <English>Prussian Blue Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności błękitu pruskiego</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_prussianBlueEfficiencyMultiplier_desc">
+            <English>Multiplier for Prussian Blue radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez błękit pruski. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_setting_radiationSeverityCoefficient">
             <English>Damage Severity Coefficient</English>
@@ -277,6 +301,14 @@
         <Key ID="str_kolmir_radiate_setting_vodkaDrinkTime_desc">
             <English>Time in seconds required to drink a bottle or half-bottle of vodka.</English>
             <Polish>Czas w sekundach potrzebny na wypicie butelki lub pół butelki wódki.</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaEfficiencyMultiplier">
+            <English>Vodka Efficiency Multiplier</English>
+            <Polish>Mnożnik skuteczności wódki</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_setting_vodkaEfficiencyMultiplier_desc">
+            <English>Multiplier for vodka radiation reduction. 1.0 = reduces 40 mSv (1% of lethal dose), 10.0 = reduces 400 mSv (10% of lethal dose).</English>
+            <Polish>Mnożnik redukcji promieniowania przez wódkę. 1.0 = redukuje 40 mSv (1% dawki śmiertelnej), 10.0 = redukuje 400 mSv (10% dawki śmiertelnej).</Polish>
         </Key>
         <Key ID="str_kolmir_radiate_setting_vodkaLimitBeforeEffect">
             <English>Vodka Level Limit before Visual Effect</English>
@@ -341,38 +373,6 @@
         <Key ID="str_kolmir_radiate_vodkabottlehalf_displayname">
             <English>Vodka Bottle (Half)</English>
             <Polish>Butelka wódki (Połowa)</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaEfficiencyMultiplier">
-            <English>Vodka Efficiency Multiplier</English>
-            <Polish>Mnożnik skuteczności wódki</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_vodkaEfficiencyMultiplier_desc">
-            <English>Multiplier for vodka radiation reduction. 1.0 = reduces 40 mSv (1% of lethal dose), 10.0 = reduces 400 mSv (10% of lethal dose).</English>
-            <Polish>Mnożnik redukcji promieniowania przez wódkę. 1.0 = redukuje 40 mSv (1% dawki śmiertelnej), 10.0 = redukuje 400 mSv (10% dawki śmiertelnej).</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_edtaEfficiencyMultiplier">
-            <English>EDTA Efficiency Multiplier</English>
-            <Polish>Mnożnik skuteczności EDTA</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_edtaEfficiencyMultiplier_desc">
-            <English>Multiplier for EDTA radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
-            <Polish>Mnożnik redukcji promieniowania przez EDTA. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_prussianBlueEfficiencyMultiplier">
-            <English>Prussian Blue Efficiency Multiplier</English>
-            <Polish>Mnożnik skuteczności błękitu pruskiego</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_prussianBlueEfficiencyMultiplier_desc">
-            <English>Multiplier for Prussian Blue radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
-            <Polish>Mnożnik redukcji promieniowania przez błękit pruski. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_potassiumIodateEfficiencyMultiplier">
-            <English>Potassium Iodate Efficiency Multiplier</English>
-            <Polish>Mnożnik skuteczności jodanu potasu</Polish>
-        </Key>
-        <Key ID="str_kolmir_radiate_setting_potassiumIodateEfficiencyMultiplier_desc">
-            <English>Multiplier for Potassium Iodate radiation reduction. 1.0 = reduces 400 mSv (10% of lethal dose), 10.0 = reduces 4000 mSv (100% of lethal dose).</English>
-            <Polish>Mnożnik redukcji promieniowania przez jodan potasu. 1.0 = redukuje 400 mSv (10% dawki śmiertelnej), 10.0 = redukuje 4000 mSv (100% dawki śmiertelnej).</Polish>
         </Key>
     </Package>
 </Project>
