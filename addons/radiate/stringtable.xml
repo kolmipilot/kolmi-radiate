@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="KOLMIR">
-    <Package name="Radiate">
+<Project name="kolmir">
+    <Package name="radiate">
         <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Large">
             <English>Large Radiation Burn</English>
             <Polish>Duże poparzenie od promieniowania</Polish>
