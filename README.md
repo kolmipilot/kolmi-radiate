@@ -330,3 +330,7 @@ enableRadiationSickness = false
 - **Absolute Vodka** provides minor radiation reduction with visual side effects
 - **Radiation Sickness** system with progressive symptoms, configurable speed and severity
 - **KAT (KAM) integration** for advanced medical effects when the mod is present
+
+## Credits
+
+- Bottle of Vodka Model -  "Absolut Vodka 1L Bottle" (https://skfb.ly/oEVpX) by Saandy is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).

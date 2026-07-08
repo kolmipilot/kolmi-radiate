@@ -2,7 +2,7 @@
 <Project name="kolmir">
     <Package name="main">
         <Key ID="str_kolmir_main_url">
-            <English>https://github.com/MiszczuZPolski/IBCMod</English>
+            <English>https://github.com/kolmipilot/kolmi-radiate</English>
         </Key>
     </Package>
 </Project>

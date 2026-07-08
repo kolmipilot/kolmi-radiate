@@ -179,3 +179,7 @@ The system includes specialized medical items to manage accumulated radiation do
 - Reusable **Blood Tester** allows checking patient radiation dose via the ACE Medical examine menu
 - Three medical treatments available: **EDTA**, **Prussian Blue**, and **Potassium Iodate** — each with configurable efficiency
 - **Absolute Vodka** provides minor radiation reduction with visual side effects
+
+## Credits
+
+- Bottle of Vodka Model -  "Absolut Vodka 1L Bottle" (https://skfb.ly/oEVpX) by Saandy is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
