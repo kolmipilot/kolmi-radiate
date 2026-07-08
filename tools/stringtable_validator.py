@@ -49,8 +49,8 @@ def check_stringtable(filepath):
     else:
         package_name = package.get("name")
 
-        if package_name.islower():
-            print("  ERROR: Package name attribute '{}' is all lowercase, should be in titlecase.".format(package_name))
+        if not package_name.islower():
+            print("  ERROR: Package name attribute '{}' is not all lowercase, should be in lowercase.".format(package_name))
             errors += 1
 
         if package_name.lower() != os.path.basename(os.path.dirname(filepath)):
@@ -64,7 +64,7 @@ def check_stringtable(filepath):
             keys.extend(container.findall("Key"))
 
         key_ids = []
-        key_prefix = "STR_{}_{}_".format(PROJECT_NAME, package_name)
+        key_prefix = "str_{}_{}_".format(PROJECT_NAME.lower(), package_name.lower())
 
         for key in keys:
             key_id = key.get("ID")
