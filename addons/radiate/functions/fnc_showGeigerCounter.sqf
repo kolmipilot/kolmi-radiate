@@ -27,7 +27,7 @@ if('kolmir_SimpleGeigerCounter' in assignedItems ACE_player) then {
     TRACE_1("kolmir_SimpleGeigerCounter: shown",_unit);
 
     private _display = uiNamespace getVariable ["kolmir_SimpleGeigerCounter", displayNull];
-    private _exposure = _display displayCtrl 18805;
+    private _exposure = _display displayCtrl 18405;
 
     [{
         _this params ["_args", "_pfhID"];

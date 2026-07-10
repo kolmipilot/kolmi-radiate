@@ -6,7 +6,7 @@ Mod introduces new ultimate radiation system to the Arma 3. It includes multiple
 
 known bugs:
 
-- zeus module dosent work as intented. It opens two times window, just type values two times and click okay. Everything should work then. Will be fixed soon.
+- The Zeus module does not work as intended. The configuration window opens twice. Simply enter the values both times and click OK. The module will work correctly afterward. This issue will be fixed in a future update.
 
 future plans:
 

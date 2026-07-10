@@ -16,7 +16,7 @@ class ACE_Medical_Treatment_Actions {
         displayName = CSTRING(CheckDosimeter_DisplayName);
         displayNameProgress = CSTRING(CheckDosimeter_DisplayNameProgress);
         allowedSelections[] = {"LeftArm", "RightArm"};
-        treatmentTime = QGVAR(CheckDosimeter_TreatmentTime);
+        //treatmentTime = QGVAR(CheckDosimeter_TreatmentTime);
         category = "examine";
         consumeItem = 0;
         items[] = {};
