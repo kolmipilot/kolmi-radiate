@@ -48,8 +48,8 @@ private _fnc_onKeyUp = {
 private _fnc_onLBSelChange = {
     params ["_control"];
     private _display = ctrlParent _control;
-    private _gastype = lbCurSel _control;
-    _display setVariable [QGVAR(ui_gastype), _gastype];
+    private _radtype = lbCurSel _control;
+    _display setVariable [QGVAR(ui_radtype), _radtype];
 };
 
 [_maxEdit] call _fnc_onKeyUp;

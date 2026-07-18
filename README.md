@@ -4,10 +4,6 @@ Mod introduces new ultimate radiation system to the Arma 3. It includes multiple
 
 **Mod is still WIP:**
 
-known bugs:
-
-- The Zeus module does not work as intended. The configuration window opens twice. Simply enter the values both times and click OK. The module will work correctly afterward. This issue will be fixed in a future update.
-
 future plans:
 
 - Improve geiger counter sounds

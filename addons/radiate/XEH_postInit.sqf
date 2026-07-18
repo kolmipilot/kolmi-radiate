@@ -63,6 +63,7 @@ GVAR(RadiationSources) = createHashMap;
         ["_source", objNull, [objNull, []]],
         ["_radius", 0, [0]],
         ["_radiationType", "alpha", ["", 0]],
+        ["_irradiationSource", false, [false, true]],
         ["_key", ""],
         ["_condition", {true}, [{}]],
         ["_conditionArgs", []]

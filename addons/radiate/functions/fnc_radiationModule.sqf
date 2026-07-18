@@ -32,7 +32,7 @@ if (isServer) then {
         params ["_logic", "_radius", "_radiationLevel", "_units"];
 
         {
-            [QGVAR(addRadiationSource), [_x, _radius, _radiationLevel, _x, {
+            [QGVAR(addRadiationSource), [_x, _radius, _radiationLevel, true, _x, {
                 params ["_endTime", "_logic"];
 
                 // If logic no longer exists, exit

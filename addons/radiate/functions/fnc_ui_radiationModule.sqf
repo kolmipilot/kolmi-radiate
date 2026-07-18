@@ -24,6 +24,31 @@ private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
+// Handle double-opening in multiplayer:
+// The first time (when placing), it is opened for a local dummy module.
+// When that's confirmed, the engine deletes the dummy and spawns the real server-side module.
+// Synced real module creation then triggers the dialog to open a second time.
+// We auto-confirm the second dialog with the attributes saved from the first dialog.
+if (isMultiplayer) then {
+    private _lastDummyStr = missionNamespace getVariable ["kolmir_radiate_lastZeusDummyStr", ""];
+    if (_lastDummyStr != "" && {_lastDummyStr != str _logic}) then {
+        missionNamespace setVariable ["kolmir_radiate_lastZeusDummyStr", ""];
+        private _attrs = missionNamespace getVariable ["kolmir_radiate_lastZeusAttributes", [20, "alpha"]];
+        _attrs params ["_radius", "_radiationLevel"];
+
+        private _center = if (isNull attachedTo _logic) then { _logic } else { attachedTo _logic };
+
+        [QGVAR(addRadiationSource), [_center, _radius, _radiationLevel, true, _logic, {
+            params ["_endTime", "_logic"];
+            if (isNull _logic) exitWith { false };
+            CBA_missionTime < _endTime
+        }, [CBA_missionTime + 1e10, _logic]]] call CBA_fnc_serverEvent;
+
+        _display setVariable [QGVAR(Confirmed), true];
+        _display closeDisplay 1;
+    };
+};
+
 scopeName "Main";
 private _fnc_errorAndClose = {
     params ["_msg"];
@@ -73,12 +98,10 @@ private _fnc_onConfirm = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
-    private _ctrlRadius = _display displayCtrl 1611;
-    private _radius = parseNumber ctrlText _ctrlRadius;
-    private _ctrlRadiationType = _display displayCtrl 1617;
-    private _radiationIdx = lbCurSel _ctrlRadiationType;
+    private _radiationIdx = _display getVariable [QGVAR(ui_radtype), 0];
     private _radiationTypes = ["alpha", "beta", "gamma"];
     private _radiationLevel = if (_radiationIdx >= 0 && _radiationIdx < count _radiationTypes) then { _radiationTypes select _radiationIdx } else { "alpha" };
+    private _radius = _display getVariable [QGVAR(ui_radius), 20];
     private _center = objNull;
 
     if (isNull attachedTo _logic) then {
@@ -87,7 +110,12 @@ private _fnc_onConfirm = {
         _center = attachedTo _logic;
     };
 
-    [QGVAR(addRadiationSource), [_center, _radius, _radiationLevel, _logic, {
+    if (isMultiplayer) then {
+        missionNamespace setVariable ["kolmir_radiate_lastZeusDummyStr", str _logic];
+        missionNamespace setVariable ["kolmir_radiate_lastZeusAttributes", [_radius, _radiationLevel]];
+    };
+
+    [QGVAR(addRadiationSource), [_center, _radius, _radiationLevel, true, _logic, {
         params ["_endTime", "_logic"];
 
         // If logic no longer exists, exit
