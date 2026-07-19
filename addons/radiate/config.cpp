@@ -23,7 +23,8 @@ class CfgPatches {
             "kolmir_VodkaBottle_Empty",
             "kolmir_BloodTester",
             "kolmir_PotassiumIodate_Item",
-            "kolmir_PrussianBlue_Item"
+            "kolmir_PrussianBlue_Item",
+            "kolmir_decon_kit"
         };
     };
 };

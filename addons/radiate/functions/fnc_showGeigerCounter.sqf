@@ -102,27 +102,27 @@ if('kolmir_SimpleGeigerCounter' in assignedItems ACE_player) then {
 
         // Get raw intensity from areaTypes
         private _areaTypes = _unit getVariable [QGVAR(areaTypes), []];
-        private _intensity = 0;
-        { _intensity = _intensity + (_x select 1); } forEach _areaTypes;
 
         if ((_unit getVariable [QGVAR(AdvancedGeigerCounterEnabled), false])) then {
-
-            // Summary — total of all types
-            _exposure ctrlSetText ((_intensity * (random [0.9, 1, 1.1])) toFixed 0);
 
             // Per-type: search by name, 0 if not present
             private _alphaVal = 0;
             { if ((_x select 0) isEqualTo "alpha") then { _alphaVal = _x select 1; }; } forEach _areaTypes;
+            _alphaVal=_alphaVal * (random [0.9, 1, 1.1]) toFixed 0;
 
             private _betaVal = 0;
             { if ((_x select 0) isEqualTo "beta")  then { _betaVal  = _x select 1; }; } forEach _areaTypes;
+            _betaVal=_betaVal * (random [0.9, 1, 1.1]) toFixed 0;
 
             private _gammaVal = 0;
             { if ((_x select 0) isEqualTo "gamma") then { _gammaVal = _x select 1; }; } forEach _areaTypes;
+            _gammaVal=_gammaVal * (random [0.9, 1, 1.1]) toFixed 0;
 
-            _exposure1 ctrlSetText ((_alphaVal * (random [0.9, 1, 1.1])) toFixed 0);
-            _exposure2 ctrlSetText ((_betaVal  * (random [0.9, 1, 1.1])) toFixed 0);
-            _exposure3 ctrlSetText ((_gammaVal * (random [0.9, 1, 1.1])) toFixed 0);
+            _exposure1 ctrlSetText (_alphaVal);
+            _exposure2 ctrlSetText (_betaVal);
+            _exposure3 ctrlSetText (_gammaVal);
+            _exposure ctrlSetText str(parseNumber(_alphaVal) + parseNumber(_betaVal) + parseNumber(_gammaVal));
+            
 
         } else {
             _exposure  ctrlSetText "----";

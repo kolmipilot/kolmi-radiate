@@ -185,6 +185,38 @@ The system includes specialized medical items to manage accumulated radiation do
 
 ---
 
+## Contamination
+
+When a unit is exposed to high-intensity radiation (above **500 mSv/h**), the unit becomes **contaminated**. Contamination means the unit itself becomes a moving radiation source, emitting radiation of the same type it was exposed to.
+
+### How Contamination Works
+
+1. **Exposure Timer:** The unit must remain in the radiation zone for a configurable amount of time (default: **30 seconds**, CBA setting `contaminationTime`).
+2. **Protection Check:** Contamination only occurs if the unit lacks **full CBRN protection** — both a gas mask and a protective suit from the available equipment lists.
+3. **Contamination Source:** Once contaminated, a new radiation source is created and **attached to the unit**. The contamination power is **10% of the original source power**.
+4. **Duration:** The contamination persists as long as the unit is alive and the contamination entry exists in its variable. The unit will continue to emit radiation to nearby units until decontaminated.
+
+### Decontamination
+
+Decontamination clears all active contaminations from a unit and removes the attached radiation sources.
+
+- **Action:** Applied through the ACE Medical treatment menu.
+- **Effect:** Removes all contamination entries and stops the unit from emitting radiation.
+- **Server-side:** The function runs on the server to ensure proper cleanup of global radiation sources.
+
+### CBRN Protection
+
+Full CBRN protection (gas mask + protective suit) **prevents contamination entirely**. Units wearing both items from the configured available lists will not become contaminated, regardless of radiation intensity.
+
+| Equipment | Effect on Contamination |
+|-----------|-------------------------|
+| Gas Mask + Suit | **Full protection** — no contamination |
+| Gas Mask only | No protection — contamination possible |
+| Suit only | No protection — contamination possible |
+| Neither | No protection — contamination possible |
+
+---
+
 ## Radiation Sickness
 
 Radiation sickness is automatically applied to any unit that has accumulated a radiation dose above defined thresholds.  

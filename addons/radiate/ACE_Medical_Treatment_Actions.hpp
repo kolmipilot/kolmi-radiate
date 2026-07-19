@@ -1,8 +1,9 @@
 class ACE_Medical_Treatment_Actions {
     class Morphine;
     class CheckPulse;
+    class Diagnose;
     class Painkillers: Morphine {};
-    class EDTA: Morphine {
+    class kolmir_EDTA: Morphine {
         displayName = CSTRING(Take_EDTA);
         displayNameProgress = CSTRING(Using_EDTA);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -12,7 +13,7 @@ class ACE_Medical_Treatment_Actions {
         items[] = {"kolmir_EdtaAutoInjector"};
         callbackSuccess = QFUNC(medication);
     };
-    class CheckDosimeter: CheckPulse {
+    class kolmir_CheckDosimeter: CheckPulse {
         displayName = CSTRING(CheckDosimeter_DisplayName);
         displayNameProgress = CSTRING(CheckDosimeter_DisplayNameProgress);
         allowedSelections[] = {"LeftArm", "RightArm"};
@@ -27,7 +28,7 @@ class ACE_Medical_Treatment_Actions {
         callbackSuccess = QFUNC(CheckDosimeterMed);
         litter[] = {};
     };
-    class CheckRadiation: CheckPulse {
+    class kolmir_CheckRadiation: CheckPulse {
         displayName = CSTRING(CheckRadiation_DisplayName);
         displayNameProgress = CSTRING(CheckRadiation_DisplayNameProgress);
         allowedSelections[] = {"LeftArm", "RightArm"};
@@ -42,7 +43,7 @@ class ACE_Medical_Treatment_Actions {
         callbackSuccess = QFUNC(CheckRadiation);
         litter[] = {};
     };
-    class PrussianBlue: Painkillers {
+    class kolmir_PrussianBlue: Painkillers {
         displayName = CSTRING(Administer_PrussianBlue);
         displayNameProgress = CSTRING(Using_PrussianBlue);
         allowedSelections[] = {"Head"};
@@ -53,7 +54,7 @@ class ACE_Medical_Treatment_Actions {
         items[] = {"kolmir_PrussianBlue"};
         callbackSuccess = QFUNC(medication);
     };
-    class PotassiumIodate: Painkillers {
+    class kolmir_PotassiumIodate: Painkillers {
         displayName = CSTRING(Administer_PotassiumIodate);
         displayNameProgress = CSTRING(Using_PotassiumIodate);
         allowedSelections[] = {"Head"};
@@ -63,5 +64,17 @@ class ACE_Medical_Treatment_Actions {
         condition = "";
         items[] = {"kolmir_PotassiumIodate"};
         callbackSuccess = QFUNC(medication);
+    };
+    class kolmir_Decontamination: Diagnose {
+        displayName = CSTRING(decontaminate);
+        displayNameProgress = CSTRING(decontaminate_desc);
+        allowedSelections[] = {"Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        allowSelfTreatment = 1;
+        consumeItem = 1;
+        treatmentTime = 14;
+        condition = QUOTE((_patient getVariable [ARR_2(QQGVAR(Contamination),[])]) isNotEqualTo []);
+        items[] = {"kolmir_decon_kit"};
+        callbackSuccess = QFUNC(decontamination);
+        icon = QPATHTOF(ui\deconkit_icon.paa);
     };
 };

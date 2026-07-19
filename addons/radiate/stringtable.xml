@@ -374,5 +374,21 @@
             <English>Vodka Bottle (Half)</English>
             <Polish>Butelka wódki (Połowa)</Polish>
         </Key>
+        <Key ID="str_kolmir_radiate_deconKitItem">
+            <English>Decon Kit</English>
+            <Polish>Zestaw dekontaminacyjny</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_deconKitItem_desc">
+            <English>A kit for decontaminating a person</English>
+            <Polish>Zestaw do dekontaminacji osoby</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_decontaminate">
+            <English>Decontaminate</English>
+            <Polish>Dekontaminacja</Polish>
+        </Key>
+        <Key ID="str_kolmir_radiate_decontaminate_desc">
+            <English>Decontaminates a unit</English>
+            <Polish>Dekontaminuje jednostkę</Polish>
+        </Key>
     </Package>
 </Project>

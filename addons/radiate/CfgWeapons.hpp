@@ -49,6 +49,19 @@ class CfgWeapons {
             mass = 3;
         };
     };
+    class kolmir_decon_kit : ACE_ItemCore {
+        scope = 2;
+        author = "kolmipilot";
+        displayName = CSTRING(deconKitItem);
+        model = "\a3\Props_F_Enoch\Military\Decontamination\DeconKit_01_F.p3d";
+        picture = QPATHTOF(ui\deconkit_icon.paa);
+        descriptionShort = CSTRING(deconKitItem_desc);
+        descriptionUse = CSTRING(deconKitItem_desc);
+        ACE_isMedicalItem = 1;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 4;
+        };
+    };
     class ItemWatch;
     class kolmir_SimpleGeigerCounter : ItemWatch {
         ACE_hideItemType = "Watch";

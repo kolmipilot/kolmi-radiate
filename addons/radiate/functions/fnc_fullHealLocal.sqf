@@ -22,3 +22,4 @@ _patient setVariable [QGVAR(radiationDose), 0, true];
 _patient setVariable [QGVAR(countedRadiationDose), 0, true];
 _patient setVariable [QGVAR(medicationProtection), 0, true];
 _patient setVariable [QGVAR(areaTypes), [], true];
+_patient setVariable [QGVAR(Contamination), [], true];

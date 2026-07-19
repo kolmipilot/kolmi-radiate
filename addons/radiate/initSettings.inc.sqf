@@ -185,3 +185,13 @@
     [0, 3, 0.5, 1],
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(contaminationTime),
+    "SLIDER",
+    ["Contamination Time", "Time in seconds spent inside a source before becoming contaminated"],
+    CBA_SETTINGS_CAT,
+    [1, 300, 30, 0],
+    1
+] call CBA_fnc_addSetting;
+

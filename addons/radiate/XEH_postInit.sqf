@@ -21,11 +21,14 @@ GVAR(KATLoaded) = [] call FUNC(hasKAT);
     _unit say3D [_tone];
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(decontaminationLocal), LINKFUNC(decontamination)] call CBA_fnc_addEventHandler;
+
+
 [CBA_SETTINGS_CAT, QGVAR(showSimpleGeigerCounter), "Show Geiger Counter", {
     // Conditions: canInteract
     if (!([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call ACEFUNC(common,canInteractWith)) || {!(('kolmir_SimpleGeigerCounter' in assignedItems ACE_player) || ('kolmir_AdvancedGeigerCounter' in assignedItems ACE_player))}) exitWith { false };
 
-    if !(GETMVAR(GVAR(GeigerCounterActive),false)) then {
+    if !(GETMVAR(GVAR(GeigerCounterActive),false) || {GETMVAR(GVAR(AdvancedGeigerCounterActive),false)}) then {
         [ACE_player] call FUNC(showGeigerCounter);
     } else {
         call FUNC(hideGeigerCounter);
@@ -53,6 +56,8 @@ if (hasInterface) then {
     [LINKFUNC(radiationSicknessPFH), 2, []] call CBA_fnc_addPerFrameHandler;
 };
 
+[QACEGVAR(medical_treatment,fullHealLocalMod), LINKFUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
+
 if (!isServer) exitWith {};
 
 
@@ -63,7 +68,7 @@ GVAR(RadiationSources) = createHashMap;
         ["_source", objNull, [objNull, []]],
         ["_radius", 0, [0]],
         ["_radiationType", "alpha", ["", 0]],
-        ["_irradiationSource", false, [false, true]],
+        ["_contaminationSource", false, [false, true]],
         ["_key", ""],
         ["_condition", {true}, [{}]],
         ["_conditionArgs", []]
@@ -104,7 +109,7 @@ GVAR(RadiationSources) = createHashMap;
         [QGVAR(removeRadiationSource), _key] call CBA_fnc_localEvent;
     };
 
-    GVAR(RadiationSources) set [_hashedKey, [_radiationLogic, _radius, _radiationType, _condition, _conditionArgs]];
+    GVAR(RadiationSources) set [_hashedKey, [_radiationLogic, _radius, _radiationType, _contaminationSource, _condition, _conditionArgs]];
 }] call CBA_fnc_addEventHandler;
 
 [LINKFUNC(radiationManagerPFH), RADIATION_MANAGER_PFH_DELAY, []] call CBA_fnc_addPerFrameHandler;

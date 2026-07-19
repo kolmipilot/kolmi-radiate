@@ -19,12 +19,10 @@
 params ["_unit"];
 TRACE_1("handleUnitVitals called",_unit);
 
-// Oblicz czas od ostatniej aktualizacji
 private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
 private _deltaT = ((CBA_missionTime - _lastTimeUpdated) min 10) max 0;
 _unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime, true];
 
-// Pobierz typy promieniowania (2D array)
 private _areaTypes = _unit getVariable [QGVAR(areaTypes), []];
 
 if ((count _areaTypes) > 0 && isDamageAllowed _unit) then {
@@ -57,10 +55,10 @@ if ((count _areaTypes) > 0 && isDamageAllowed _unit) then {
             case "alpha": {
 
                 if (_hasMask && _hasSuit) then {
-                    _doseRate = 0;   // 100% blokady
+                    _doseRate = 0;   
                 } else {
                     if (_hasMask) then {
-                        _doseRate = _intensity * 0.1;  // -90%
+                        _doseRate = _intensity * 0.1;  
                     } else {
                         _doseRate = _intensity;
                     };

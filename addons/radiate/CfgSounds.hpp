@@ -4,7 +4,7 @@ class CfgSounds {
         sound[] =
         {
             QPATHTOF(audio\geiger.ogg),
-            8,
+            3,
             0.7,
             10
         };
@@ -15,7 +15,7 @@ class CfgSounds {
         sound[] =
         {
             QPATHTOF(audio\geiger.ogg),
-            8,
+            3,
             0.7,
             5
         };

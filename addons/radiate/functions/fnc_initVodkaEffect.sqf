@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: kolmipilot, Antigravity
+ * Author: kolmipilot
  * Initializes visual effects for drinking vodka.
  *
  * Return Value:

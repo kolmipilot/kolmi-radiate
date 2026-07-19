@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: kolmipilot, Antigravity
+ * Author: kolmipilot
  * Handles visual effects for drinking vodka on the client.
  * Called from CBA per-frame handler (every 1 second).
  *

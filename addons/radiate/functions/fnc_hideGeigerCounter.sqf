@@ -14,5 +14,6 @@
  * Public: No
  */
 GVAR(GeigerCounterActive) = false;
+GVAR(AdvancedGeigerCounterActive) = false;
 "kolmir_SimpleGeigerCounter" cutText ["","PLAIN",0,true];
 "kolmir_AdvancedGeigerCounter" cutText ["","PLAIN",0,true];
