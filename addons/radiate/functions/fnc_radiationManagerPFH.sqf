@@ -148,7 +148,7 @@ private _activeTimersPerUnit = createHashMap;
                             {
                                 params ["_unit", "_contaminationId"];
                                 private _activeContaminations = _unit getVariable [QGVAR(Contamination), []];
-                                alive _unit && { (_activeContaminations findIf { _x select 2 isEqualTo _contaminationId }) >= 0 }
+                                !isNull _unit && { (_activeContaminations findIf { _x select 2 isEqualTo _contaminationId }) >= 0 }
                             },
                             [_unit, _contaminationId]
                         ]] call CBA_fnc_localEvent;
