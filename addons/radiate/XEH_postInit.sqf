@@ -37,6 +37,10 @@ GVAR(KATLoaded) = [] call FUNC(hasKAT);
     true
 }, { false }, [24, [false, false, false]], false] call CBA_fnc_addKeybind;
 
+["DeconShower_01_F", "initPost",{
+    (_this select 0) call FUNC(deconShowerInit);
+}, false, [], true] call CBA_fnc_addClassEventHandler;
+
 if (hasInterface) then {
     call FUNC(initVodkaEffect);
     [LINKFUNC(handleVodkaEffect), 1] call CBA_fnc_addPerFrameHandler;
@@ -111,5 +115,23 @@ GVAR(RadiationSources) = createHashMap;
 
     GVAR(RadiationSources) set [_hashedKey, [_radiationLogic, _radius, _radiationType, _contaminationSource, _condition, _conditionArgs]];
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(updateRadiationSourcePower), {
+    params ["_key", "_newPower"];
+    private _hashedId = hashValue _key;
+    private _sourceData = GVAR(RadiationSources) getOrDefault [_hashedId, nil];
+    if (!isNil "_sourceData") then {
+        _sourceData set [1, _newPower];
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(turnOnShower), {
+    params ["_shower"];
+    [_shower, true] call FUNC(toggleShower);
+}] call CBA_fnc_addEventhandler;
+[QGVAR(turnOffShower), {
+    params ["_shower"];
+    [_shower, false] call FUNC(toggleShower);
+}] call CBA_fnc_addEventhandler;
 
 [LINKFUNC(radiationManagerPFH), RADIATION_MANAGER_PFH_DELAY, []] call CBA_fnc_addPerFrameHandler;

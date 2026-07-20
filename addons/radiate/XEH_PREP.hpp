@@ -33,3 +33,5 @@ PREP(zeusAttributes);
 PREP(fullHealLocal);
 PREP(decontamination);
 PREP(init);
+PREP(deconShowerInit);
+PREP(toggleShower);
