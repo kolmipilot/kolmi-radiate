@@ -204,6 +204,15 @@ Decontamination clears all active contaminations from a unit and removes the att
 - **Effect:** Removes all contamination entries and stops the unit from emitting radiation.
 - **Server-side:** The function runs on the server to ensure proper cleanup of global radiation sources.
 
+### Decontamination Shower
+
+A placeable prop that automatically decontaminates units standing inside it.
+
+- **Model:** Decontamination shower structure with animated water particles.
+- **Activation:** ACE Interaction menu — "Turn on" / "Turn off".
+- **Effect:** Any unit standing inside the shower area is continuously decontaminated. The shower creates water particles, a looping sound, and a water puddle beneath it.
+- **Auto-cleanup:** The water puddle disappears after 180 seconds.
+
 ### CBRN Protection
 
 Full CBRN protection (gas mask + protective suit) **prevents contamination entirely**. Units wearing both items from the configured available lists will not become contaminated, regardless of radiation intensity.
